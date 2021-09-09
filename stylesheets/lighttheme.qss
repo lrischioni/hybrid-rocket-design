@@ -83,13 +83,13 @@ QAbstractScrollArea
 {
     color: #000000;
     background-color: #ECEFF1;
-    selection-background-color: rgba(69, 90, 100, 0.4);
+    selection-background-color: rgba(176, 190, 197, 0.4);
     selection-color: #000000;
 }
 
 QWidget:item:hover
 {
-    background-color: rgba(69, 90, 100, 0.2);
+    background-color: rgba(176, 190, 197, 0.2);
 }
 
 QGroupBox

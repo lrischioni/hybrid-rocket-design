@@ -81,14 +81,18 @@ QTabWidget#SimulationResults > QTabBar::tab:!selected
 
 QAbstractScrollArea
 {
+    background-color: #546E7A;
+    selection-background-color: rgba(55, 71, 79, 0.4);
+}
+
+QAbstractScrollArea::item
+{
     color: #FFFFFF;
-    background-color: #263238;
-    selection-background-color: rgba(176, 190, 197, 0.4)
 }
 
 QWidget:item:hover
 {
-    background-color: rgba(176, 190, 197, 0.2)
+    background-color: rgba(55, 71, 79, 0.4);
 }
 
 QGroupBox
