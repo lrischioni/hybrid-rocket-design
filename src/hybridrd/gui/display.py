@@ -19,7 +19,7 @@ class DisplayOutputFileWindow(QtWidgets.QWidget):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QtWidgets.QWidget(self.scrollArea)
         self.textEdit = QtWidgets.QTextEdit(self.scrollAreaWidgetContents)
-        self.textEdit.setGeometry(QtCore.QRect(0, 0, 661, 467))
+        self.textEdit.setGeometry(QtCore.QRect(0, 0, 661, 501))
         self.textEdit.setCurrentFont(QtGui.QFont('Monospace', 10))
         with open(filepath, 'r') as f:
             self.textEdit.setText(f.read())
