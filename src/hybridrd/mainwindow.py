@@ -5,6 +5,7 @@ from hybridrd.analysis import CEA
 from hybridrd.utils import PlotDictEnUs, PlotDictPtBr, BurnSimulationPlotDictYAxis
 import hybridrd.gui as gui
 import hybridrd.gui.resources_rc
+from hybridrd.gui import launchwindows
 
 
 MESSAGE_TIMEOUT = 2000
@@ -65,12 +66,12 @@ class MainWindow(QtWidgets.QMainWindow):
                 self.cea.import_cea_inputfile(inputfile_path)
                 self.statusbar.showMessage('CEA input file imported.', MESSAGE_TIMEOUT)
                 self._loadInputFileIntoUi()
-                gui.launchwindows.launchLoadInputFileConfirmationScreen(self)
+                launchwindows.launchLoadInputFileConfirmationScreen(self)
                 self.tabWidget.propellant_analysis_tab.setEnabled(True)
                 self.tabWidget.input_file_tab.run_cea_btn.setEnabled(True)
                 self.tabWidget.input_file_tab.save_changes_btn.setEnabled(False)
             else:
-                gui.launchwindows.launchInputFileNotValidWarning(self)
+                launchwindows.launchInputFileNotValidWarning(self)
 
     def _inputFileIsValid(self, inputfile_path):
         return inputfile_path.split('.')[-1] == 'inp'
@@ -119,9 +120,9 @@ class MainWindow(QtWidgets.QMainWindow):
                 self.statusbar.showMessage('Saving complete.', MESSAGE_TIMEOUT)
             except Exception:
                 self.statusbar.showMessage('Saving changes failed.', MESSAGE_TIMEOUT)
-                gui.launchwindows.launchInputInconsistentDataWarning(self)
+                launchwindows.launchInputInconsistentDataWarning(self)
         else:
-            gui.launchwindows.launchInputFileNotImportedWarning(self)
+            launchwindows.launchInputFileNotImportedWarning(self)
 
     def _setPropellantInformationInCeaInputFile(self):
         fuel_name = self.tabWidget.input_file_tab.fuel_name.text()
@@ -166,7 +167,7 @@ class MainWindow(QtWidgets.QMainWindow):
             self.statusbar.showMessage('CEA ran successfully.', MESSAGE_TIMEOUT)
             self._displayOutput()
         else:
-            gui.launchwindows.launchInputFileNotImportedWarning(self)
+            launchwindows.launchInputFileNotImportedWarning(self)
         self.tabWidget.input_file_tab.run_cea_btn.setEnabled(True)
 
     def _displayOutput(self):
@@ -185,14 +186,14 @@ class MainWindow(QtWidgets.QMainWindow):
                 self._restoreCeaInputFileOriginalInformation()
                 self.statusbar.showMessage('Analysis completed successfully.', MESSAGE_TIMEOUT)
                 self.tabWidget.propellant_analysis_tab.analysis_results_plot_widget.clear()
-                gui.launchwindows.launchStudyPerformedSuccessfullyWarning(self)
+                launchwindows.launchStudyPerformedSuccessfullyWarning(self)
                 self.statusbar.removeProgressBar()
                 self.tabWidget.propellant_analysis_tab.generate_plot_btn.setEnabled(True)
                 self.tabWidget.burn_simulation_tab.setEnabled(True)
             else:
-                gui.launchwindows.launchStartingValueBiggerThanFinalValueWarning(self)
+                launchwindows.launchStartingValueBiggerThanFinalValueWarning(self)
         else:
-            gui.launchwindows.launchInputFileNotImportedWarning(self)
+            launchwindows.launchInputFileNotImportedWarning(self)
         self.tabWidget.propellant_analysis_tab.perform_analysis_btn.setEnabled(True)
 
     def _resetBurnSimulationStartingPoint(self):
@@ -255,7 +256,7 @@ class MainWindow(QtWidgets.QMainWindow):
     def _selectInitialPoint(self):
         self.tabWidget.burn_simulation_tab.select_starting_point_btn.setEnabled(False)
         if self._containsPropellantAnalysisResults():
-            selected_point = hybridrd.gui.SelectStartingPoint(self)
+            selected_point = gui.SelectStartingPoint(self)
             if hasattr(selected_point, 'initial_of_value'):
                 self.tabWidget.burn_simulation_tab.initial_of.setText(selected_point.initial_of_value)
                 self.tabWidget.burn_simulation_tab.initial_cf.setText(selected_point.initial_cf_value)
@@ -263,7 +264,7 @@ class MainWindow(QtWidgets.QMainWindow):
                 self.tabWidget.burn_simulation_tab.initial_cstar.setText(selected_point.initial_cstar_value)
                 self.tabWidget.burn_simulation_tab.simulate_burn_btn.setEnabled(True)
         else:
-            gui.launchwindows.launchStudyNotPerformedWarning(self)
+            launchwindows.launchStudyNotPerformedWarning(self)
         self.tabWidget.burn_simulation_tab.select_starting_point_btn.setEnabled(True)
 
     def _containsPropellantAnalysisResults(self):
@@ -300,16 +301,16 @@ class MainWindow(QtWidgets.QMainWindow):
                 self._passBurnSimulationResultsToResultsTab()
                 self._restoreCeaInputFileOriginalInformation()
                 self.statusbar.showMessage('Burn simulation completed successfully.', MESSAGE_TIMEOUT)
-                gui.launchwindows.launchBurnSimulatedSuccessfullyConfirmationScreen(self)
+                launchwindows.launchBurnSimulatedSuccessfullyConfirmationScreen(self)
                 self.tabWidget.burn_results_tab.setEnabled(True)
             except Exception as diameter_values:
                 self._restoreCeaInputFileOriginalInformation()
                 nozzle_throat_diameter, grain_inner_diameter = diameter_values.args
                 self.statusbar.showMessage('Burn simulation failed.', MESSAGE_TIMEOUT)
-                gui.launchwindows.launchGrainInnerDiameterInvalidWarning(nozzle_throat_diameter, grain_inner_diameter, self)
+                launchwindows.launchGrainInnerDiameterInvalidWarning(nozzle_throat_diameter, grain_inner_diameter, self)
         except Exception:
             self.statusbar.showMessage('Burn simulation failed.', MESSAGE_TIMEOUT)
-            gui.launchwindows.launchBurnSimulationInconsistentDataWarning(self)
+            launchwindows.launchBurnSimulationInconsistentDataWarning(self)
 
     def _storeInitialValuesBasedOnMethodSelected(self, simulation_method):
         initial_of = float(self.tabWidget.burn_simulation_tab.initial_of.text())
@@ -388,7 +389,7 @@ class MainWindow(QtWidgets.QMainWindow):
         if save_file_dialog.exec_() == QtWidgets.QDialog.Accepted:
             savepath = save_file_dialog.selectedFiles()[0]
             self.cea.export_burn_simulation_results(savepath)
-            gui.launchExportResultsConfirmationScreen(self)
+            launchwindows.launchExportResultsConfirmationScreen(self)
         self.tabWidget.burn_results_tab.results_tab.export_results_btn.setEnabled(True)
 
     def _generateBurnSimulationPlots(self):

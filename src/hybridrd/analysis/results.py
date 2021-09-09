@@ -208,7 +208,7 @@ class CEABurnSimulation(object):
                 self._compute_initial_values()
             else:
                 self._update_values(idx)
-            self._append_results_over_time(idx)
+            self._append_results_over_time()
             progress_bar.setValue((idx + 1) * 100 / self.LINSPACE_SIZE)
         self.thrust_over_time = self._get_thrust_over_time()
 
