@@ -1,0 +1,100 @@
+
+ *******************************************************************************
+
+         NASA-GLENN CHEMICAL EQUILIBRIUM PROGRAM CEA2, MAY 21, 2004
+                   BY  BONNIE MCBRIDE AND SANFORD GORDON
+      REFS: NASA RP-1311, PART I, 1994 AND NASA RP-1311, PART II, 1996
+
+ *******************************************************************************
+
+
+
+ problem rocket equilibrium o/f=1.6446999999999983,
+ p,bar=11.0 sup,ae/at=147
+        reactants
+  fuel = C2H5OH(L) wt=100  t,k=390
+  oxid = O2(L) wt=100  t,k=90
+  output  short trans
+  end
+
+
+
+
+
+
+              THEORETICAL ROCKET PERFORMANCE ASSUMING EQUILIBRIUM
+
+           COMPOSITION DURING EXPANSION FROM INFINITE AREA COMBUSTOR
+
+ Pin =   159.5 PSIA
+ CASE =                
+
+             REACTANT                    WT FRACTION      ENERGY      TEMP
+                                          (SEE NOTE)     KJ/KG-MOL      K  
+ FUEL        C2H5OH(L)                    1.0000000   -265073.422    390.000
+ OXIDANT     O2(L)                        1.0000000    -12979.000     90.000
+
+ O/F=    1.64470  %FUEL= 37.811472  R,EQ.RATIO= 1.220421  PHI,EQ.RATIO= 1.266965
+
+                 CHAMBER   THROAT     EXIT
+ Pinf/P            1.0000   1.7229  2127.16
+ P, BAR            11.000   6.3848  0.00517
+ T, K             3204.33  3060.42  1186.01
+ RHO, KG/CU M    9.3704-1 5.7691-1 1.2778-3
+ H, KJ/KG        -2427.88 -3047.96 -8276.88
+ U, KJ/KG        -3601.79 -4154.67 -8681.56
+ G, KJ/KG        -41303.4 -40177.6 -22665.8
+ S, KJ/(KG)(K)    12.1322  12.1322  12.1322
+
+ M, (1/n)          22.695   22.992   24.367
+ (dLV/dLP)t      -1.03637 -1.03109 -1.00000
+ (dLV/dLT)p        1.7181   1.6445   1.0000
+ Cp, KJ/(KG)(K)    7.4264   7.0504   1.9984
+ GAMMAs            1.1227   1.1206   1.2059
+ SON VEL,M/SEC     1148.0   1113.6    698.6
+ MACH NUMBER        0.000    1.000    4.896
+
+ TRANSPORT PROPERTIES (GASES ONLY)
+   CONDUCTIVITY IN UNITS OF MILLIWATTS/(CM)(K)
+
+ VISC,MILLIPOISE   1.0457   1.0153  0.51623
+
+  WITH EQUILIBRIUM REACTIONS
+
+ Cp, KJ/(KG)(K)    7.4264   7.0504   1.9984
+ CONDUCTIVITY     15.0239  13.6584   1.5056
+ PRANDTL NUMBER    0.5169   0.5241   0.6852
+
+  WITH FROZEN REACTIONS
+
+ Cp, KJ/(KG)(K)    2.1826   2.1723   1.8221
+ CONDUCTIVITY      3.4086   3.2690   1.3508
+ PRANDTL NUMBER    0.6696   0.6747   0.6963
+
+ PERFORMANCE PARAMETERS
+
+ Ae/At                      1.0000   147.00
+ CSTAR, M/SEC               1712.2   1712.2
+ CF                         0.6504   1.9976
+ Ivac, M/SEC                2107.4   3538.6
+ Isp, M/SEC                 1113.6   3420.2
+
+
+ MOLE FRACTIONS
+
+ *CO              0.21912  0.21233  0.11393
+ *CO2             0.15343  0.16509  0.28607
+ *H               0.02434  0.02094  0.00000
+ HO2              0.00004  0.00002  0.00000
+ *H2              0.08038  0.07776  0.13892
+ H2O              0.43872  0.45487  0.46108
+ *O               0.00922  0.00694  0.00000
+ *OH              0.05508  0.04605  0.00000
+ *O2              0.01967  0.01599  0.00000
+
+  * THERMODYNAMIC PROPERTIES FITTED TO 20000.K
+
+ NOTE. WEIGHT FRACTION OF FUEL IN TOTAL FUELS AND OF OXIDANT IN TOTAL OXIDANTS
+
+
+

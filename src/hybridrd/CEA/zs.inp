@@ -1,0 +1,7 @@
+problem   
+    det   t,k=300,  p,bar=1,
+react  
+  fuel=H2 moles=1  t,k=298  
+  oxid=O2 moles=0.5  t,k=298  
+output   
+ end

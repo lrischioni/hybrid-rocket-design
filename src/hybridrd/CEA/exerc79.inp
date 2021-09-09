@@ -1,0 +1,8 @@
+problem   case=exerc79 phi,eq.ratio=0.6,0.8,1,1.2,1.4,
+    det   t,k=298.15,  p,atm=1,
+react  
+  fuel=H2 
+  oxid=O2 
+output  
+    plot t1 p1 detvel t 
+end

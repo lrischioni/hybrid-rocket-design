@@ -1,0 +1,9 @@
+problem   
+    det   t,k=298.15,  p,bar=0.4,
+react  
+  fuel=C6H14,n-hexane moles=1  
+  oxid=O2 moles=9.5  
+  oxid=N2 moles=35.72  
+output  
+    plot detvel 
+end

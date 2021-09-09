@@ -1,0 +1,7 @@
+include *.md
+
+include LICENSE.txt
+
+recursive-include src/hybridrd/templates *
+
+recursive-include src/hybridrd/CEA *

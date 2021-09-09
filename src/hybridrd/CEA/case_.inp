@@ -1,0 +1,7 @@
+problem  rocket  equilibrium o/f=1.6514,
+ p,bar=5
+       reactants
+ fuel = C5O2H8(L) wt=100  t,k=400
+ oxid = O2(L) wt=100  t,k=298
+ output  short trans
+ end

@@ -1,0 +1,130 @@
+
+ *******************************************************************************
+
+         NASA-GLENN CHEMICAL EQUILIBRIUM PROGRAM CEA2, MAY 21, 2004
+                   BY  BONNIE MCBRIDE AND SANFORD GORDON
+      REFS: NASA RP-1311, PART I, 1994 AND NASA RP-1311, PART II, 1996
+
+ *******************************************************************************
+
+
+
+ problem    o/f=1.017904315,
+     rocket  frozen  nfz=2
+   p,bar=91.91481307,
+   pi/p=1737.191704,
+ react
+   fuel=H2(L) wt=1.  t,k=25.3375
+   oxid=O2(L) wt=1.  t,k=90.17
+ end
+
+ OPTIONS: TP=F  HP=F  SP=F  TV=F  UV=F  SV=F  DETN=F  SHOCK=F  REFL=F  INCD=F
+ RKT=T  FROZ=T  EQL=F  IONS=F  SIUNIT=T  DEBUGF=F  SHKDBG=F  DETDBG=F  TRNSPT=F
+
+ TRACE= 0.00E+00  S/R= 0.000000E+00  H/R= 0.000000E+00  U/R= 0.000000E+00
+
+ Pc,BAR =    91.914813
+
+ Pc/P =  1737.1917
+
+ SUBSONIC AREA RATIOS =
+
+ SUPERSONIC AREA RATIOS =
+
+ NFZ=  2  Mdot/Ac= 0.000000E+00  Ac/At= 0.000000E+00
+
+ NOTE! REACTANT H2(L)          HAS BEEN DEFINED FOR TEMPERATURE   20.27K ONLY.
+ YOUR TEMPERATURE ASSIGNMENT   25.34 IS NOT = BUT <10 K FROM THIS VALUE. (REACT)
+
+    REACTANT          WT.FRAC   (ENERGY/R),K   TEMP,K  DENSITY
+        EXPLODED FORMULA
+ F: H2(L)            1.000000  -0.108389E+04    20.27  0.0000
+          H  2.00000
+ O: O2(L)            1.000000  -0.156101E+04    90.17  0.0000
+          O  2.00000
+
+  SPECIES BEING CONSIDERED IN THIS SYSTEM
+ (CONDENSED PHASE MAY HAVE NAME LISTED SEVERAL TIMES)
+  LAST thermo.inp UPDATE:    9/09/04
+
+  g 6/97  *H               g 4/02  HO2              tpis78  *H2            
+  g 8/89  H2O              g 6/99  H2O2             g 5/97  *O             
+  g 4/02  *OH              tpis89  *O2              g 8/01  O3             
+  g11/99  H2O(cr)          g 8/01  H2O(L)           g 8/01  H2O(L)         
+
+ O/F =   1.017904
+
+                       EFFECTIVE FUEL     EFFECTIVE OXIDANT        MIXTURE
+ ENTHALPY                  h(2)/R              h(1)/R               h0/R
+ (KG-MOL)(K)/KG       -0.53767500E+03     -0.48783267E+02     -0.29106023E+03
+
+ KG-FORM.WT./KG             bi(2)               bi(1)               b0i
+  *H                   0.99212255E+00      0.00000000E+00      0.49165986E+00
+  *O                   0.00000000E+00      0.62502344E-01      0.31528455E-01
+
+ POINT ITN      T            H           O 
+   1   10     993.951      -6.553     -38.535
+ Pinf/Pt = 1.867017
+   2    3     841.804      -6.667     -43.727
+ Pinf/Pt = 1.873825
+   2    2     840.981      -6.668     -43.760
+
+
+
+
+
+           THEORETICAL ROCKET PERFORMANCE ASSUMING FROZEN COMPOSITION
+                                 AFTER POINT 2
+
+ Pin =  1333.1 PSIA
+ CASE =                
+
+             REACTANT                    WT FRACTION      ENERGY      TEMP
+                                          (SEE NOTE)     KJ/KG-MOL      K  
+ FUEL        H2(L)                        1.0000000     -9012.000     20.270
+ OXIDANT     O2(L)                        1.0000000    -12979.000     90.170
+
+ O/F=    1.01790  %FUEL= 49.556364  R,EQ.RATIO= 7.797081  PHI,EQ.RATIO= 7.797081
+
+                 CHAMBER   THROAT
+ Pinf/P            1.0000   1.8738
+ P, BAR            91.915   49.052
+ T, K              993.95   840.98
+ RHO, KG/CU M    4.5243 0 2.8536 0
+ H, KJ/KG        -2420.02 -3595.26
+ U, KJ/KG        -4451.61 -5314.19
+ G, KJ/KG        -36665.3 -32570.1
+ S, KJ/(KG)(K)    34.4537  34.4537
+
+ M, (1/n)           4.068    4.068
+ Cp, KJ/(KG)(K)    7.7675   7.6066
+ GAMMAs            1.3571   1.3674
+ SON VEL,M/SEC     1660.5   1533.1
+ MACH NUMBER        0.000    1.000
+
+ PERFORMANCE PARAMETERS
+
+ Ae/At                      927.08
+ CSTAR, M/SEC               2100.9
+ CF                         0.7297
+ Ivac, M/SEC                2654.3
+ Isp, M/SEC                 1533.1
+
+ MOLE FRACTIONS
+
+ *H2             0.87175   H2O             0.12825
+
+  * THERMODYNAMIC PROPERTIES FITTED TO 20000.K
+
+    PRODUCTS WHICH WERE CONSIDERED BUT WHOSE MOLE FRACTIONS
+    WERE LESS THAN 5.000000E-06 FOR ALL ASSIGNED CONDITIONS
+
+
+
+ NOTE. WEIGHT FRACTION OF FUEL IN TOTAL FUELS AND OF OXIDANT IN TOTAL OXIDANTS
+
+ WARNING!!  CALCULATIONS WERE STOPPED BECAUSE NEXT POINT IS MORE
+ THAN 50 K BELOW THE TEMPERATURE RANGE OF A CONDENSED SPECIES (ROCKET)
+
+
+

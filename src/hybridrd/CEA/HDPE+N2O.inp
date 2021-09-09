@@ -1,0 +1,9 @@
+problem   case=HDPE+N2O o/f=8,8.5,9,7.5,
+      rocket  frozen  nfz=2  tcest,k=3800
+  p,bar=25,
+  pi/p=26.04,
+react  
+  oxid=N2O t,k=298.15  
+  fuel=HDPE  
+    h,kj/mol=-25.6  C 2 H 4 
+ end

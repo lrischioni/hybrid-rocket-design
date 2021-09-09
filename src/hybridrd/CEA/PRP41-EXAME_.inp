@@ -1,0 +1,8 @@
+problem    o/f=4.954499494,
+      rocket  frozen  nfz=2 
+  p,bar=29.37269532,
+  pi/p=830.0419735,
+react  
+  oxid=O2(L) wt=1.  t,k=90.17  
+  fuel=C2H5OH(L) wt=1.  t,k=298.15  
+end

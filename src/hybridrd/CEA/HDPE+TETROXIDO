@@ -1,0 +1,12 @@
+problem   case=HDPE+Tetroxido
+      rocket  frozen  nfz=2  tcest,k=3800
+  p,bar=25,
+  pi/p=26.04,
+react  
+  fuel=HDPE  t,k=298.15  
+    h,kj/mol=-53.8  C 2 H 4 
+  oxid=NTO  t,k=298.15  
+    h,kj/mol=-17.55  N 2 O 4 
+output  massf 
+    plot %f o/f phi,eq.ratio r,eq.ratio isp cf 
+end

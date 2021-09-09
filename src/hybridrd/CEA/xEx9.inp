@@ -1,0 +1,13 @@
+#  EXAMPLE 9:
+#     (a)  Rocket problem with a finite-area combustor (rocket  fac).
+#     (b)  Contraction ratio of 1.58 (acat=1.58) is assigned.
+#     (c)  Fuel, oxidant, and the remaining parameters are the same as in 
+#          example 8.
+
+reac  fuel=H2(L)  wt%=100.  t,k=20.27 
+      oxid=O2(L)  wt%=100.  t,k=90.17
+problem  o/f=5.55157 case=9  rocket  fac  p,bar=53.3172 acat=1.58  
+         pi/p=10,100,1000, supar=25,50,75
+output  siunits  
+end
+

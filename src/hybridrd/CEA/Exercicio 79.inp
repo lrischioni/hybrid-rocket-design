@@ -1,0 +1,8 @@
+problem   case=exercicio79 phi,eq.ratio=1,
+    det   t,k=298.15,500,  p,atm=1,10,
+react  
+  fuel=H2 wt=100  
+  oxid=O2 wt=100  
+output  
+    plot t1 
+end

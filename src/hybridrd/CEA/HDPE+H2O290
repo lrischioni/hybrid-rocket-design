@@ -1,0 +1,13 @@
+problem   case=HDPE phi,eq.ratio=1,
+      rocket  frozen  nfz=2  tcest,k=3800
+  p,bar=25,
+  pi/p=26.04,
+react  
+  oxid=H2O2(L) wt=90  t,k=298.15  
+  oxid=H2O(L) wt=10  t,k=298.15  
+  fuel=HDPE  
+    h,kj/mol=-25.6  C 2 H 4 
+output  
+     siunits massf
+    plot %f o/f phi,eq.ratio r,eq.ratio isp cf 
+end

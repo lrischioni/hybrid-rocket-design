@@ -1,0 +1,12 @@
+      
+     prob           
+ WARNING!!  DID NOT RECOGNIZE N2O            
+case=HDPE o/f=3,3.5,4,4.5,5,5.5 rocket frozen nfz=2 tcest,k=3800                                                        
+p,bar=25                                                                                                                
+pi/pe=26.04                                                                                                             
+      
+     reac           
+oxid=N2O t,k=298.15                                                                                                     
+fuel=Parafina h,kj/mol=-635.3 C 20 H 42                                                                                 
+      
+     end            

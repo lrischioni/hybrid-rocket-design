@@ -1,0 +1,14 @@
+      
+     prob           
+case=HDP o/f=1,1.5,2 rocket frozen nfz=2 tcest,k=3800                                                                   
+p,bar=15                                                                                                                
+pi/pe=15.625                                                                                                            
+      
+     reac           
+oxid=N2O4(L) t,k=298.16                                                                                                 
+fuel=HDPE h,kj/mol=-25.6 C 2 H 4                                                                                        
+      
+     outp           
+siunits massf plot o/f phi,eq.ratio isp cf t aeat                                                                       
+      
+     end            

@@ -1,0 +1,12 @@
+problem   case=asd phi,eq.ratio=0.1,
+      rocket  frozen  nfz=1  tcest,k=3800
+  p,bar=10,
+  pi/p=10.4,
+  sup,ae/at=1.,
+react  
+  oxid=O3 wt=1  t,k=298.15  
+  fuel=dodecano  wt=1  t,k=298.15  
+    h,kj/mol=-352  C 12 H 26 
+only 
+  CO CO2 O2 
+end

@@ -1,0 +1,20 @@
+#  EXAMPLE 8:
+#     (a)  Rocket problem with infinite-area combustor (rocket iac by default).
+#     (b)  The fuel is H2(L) at 20.27 K; the oxidant is O2(L) at 90.17 K.  
+#          Both are in thermo.lib so that the enthalpies and "exploded" formulas
+#          do not need to be given.  
+#     (c)  The oxidant-to-fuel ratio is 5.55157 (o/f=5.55157).
+#     (d)  The chamber pressure is 53.3172 bars (p,bar=53.3172).
+#     (e)  Calculations are with equilibrium chemistry only (equilibrium).
+#     (f)  For exit points there are three pressure ratios (pi/p=10,100,1000),
+#          one subsonic area ratio (subar=1.58), and three supersonic area
+#          ratios (supar=25,50,75).
+
+      problem  rocket  equilibrium  o/f=5.55157  
+case=8  p,bar=53.3172 sub-ae/at=1.58 pi/p=10,100,1000 sup-ae/at=25,50,75
+      reactant   
+fuel=H2(L)  wt%=100.   t(k)=20.27 
+oxid=O2(L)  wt%=100.   t(k)=90.17 
+      output  siunits
+      end
+

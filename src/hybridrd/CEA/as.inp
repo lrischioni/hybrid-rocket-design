@@ -1,0 +1,10 @@
+problem   case=MonoN2O
+    rocket  frozen  nfz=1  tcest,k=3800
+  p,bar=5,
+  pi/p=5.25,
+  sup,ae/at=1.45,
+react  
+  oxid=N2O moles=1  t,k=298  
+output    trace=  
+    plot t  
+ end

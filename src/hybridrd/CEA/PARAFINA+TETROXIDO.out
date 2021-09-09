@@ -1,0 +1,538 @@
+
+ *******************************************************************************
+
+         NASA-GLENN CHEMICAL EQUILIBRIUM PROGRAM CEA2, MAY 21, 2004
+                   BY  BONNIE MCBRIDE AND SANFORD GORDON
+      REFS: NASA RP-1311, PART I, 1994 AND NASA RP-1311, PART II, 1996
+
+ *******************************************************************************
+
+
+
+ problem   case=Parafina o/f=7,7.5,8,8.5,9,
+       rocket  frozen  nfz=2  tcest,k=3800
+   p,bar=25,
+   pi/p=26.4,
+ react
+   oxid=N2O4(L)
+   fuel=Parafina  t,k=298.15
+     h,kj/mol=-635.3  C 20 H 42
+ output  massf
+     plot isp
+ end
+
+ OPTIONS: TP=F  HP=F  SP=F  TV=F  UV=F  SV=F  DETN=F  SHOCK=F  REFL=F  INCD=F
+ RKT=T  FROZ=T  EQL=F  IONS=F  SIUNIT=T  DEBUGF=F  SHKDBG=F  DETDBG=F  TRNSPT=F
+
+ TRACE= 0.00E+00  S/R= 0.000000E+00  H/R= 0.000000E+00  U/R= 0.000000E+00
+
+ Pc,BAR =    25.000000
+
+ Pc/P =    26.4000
+
+ SUBSONIC AREA RATIOS =
+
+ SUPERSONIC AREA RATIOS =
+
+ NFZ=  2  Mdot/Ac= 0.000000E+00  Ac/At= 0.000000E+00
+
+ WARNING!!  AMOUNT MISSING FOR REACTANT  1.
+ PROGRAM SETS WEIGHT PERCENT = 100. (REACT)
+
+ WARNING!!  AMOUNT MISSING FOR REACTANT  2.
+ PROGRAM SETS WEIGHT PERCENT = 100. (REACT)
+
+    REACTANT          WT.FRAC   (ENERGY/R),K   TEMP,K  DENSITY
+        EXPLODED FORMULA
+ O: N2O4(L)          1.000000  -0.211065E+04   298.15  0.0000
+          N  2.00000  O  4.00000
+ F: Parafina         1.000000  -0.764086E+05   298.15  0.0000
+          C 20.00000  H 42.00000
+
+  SPECIES BEING CONSIDERED IN THIS SYSTEM
+ (CONDENSED PHASE MAY HAVE NAME LISTED SEVERAL TIMES)
+  LAST thermo.inp UPDATE:    9/09/04
+
+  g 7/97  *C               tpis79  *CH              g 4/02  CH2            
+  g 4/02  CH3              g11/00  CH2OH            g 7/00  CH3O           
+  g 8/99  CH4              g 7/00  CH3OH            srd 01  CH3OOH         
+  g 8/99  *CN              g12/99  CNN              tpis79  *CO            
+  g 9/99  *CO2             tpis91  COOH             tpis91  *C2            
+  g 6/01  C2H              g 1/91  C2H2,acetylene   g 5/01  C2H2,vinylidene
+  g 4/02  CH2CO,ketene     g 3/02  O(CH)2O          srd 01  HO(CO)2OH      
+  g 7/01  C2H3,vinyl       g 9/00  CH3CN            g 6/96  CH3CO,acetyl   
+  g 1/00  C2H4             g 8/88  C2H4O,ethylen-o  g 8/88  CH3CHO,ethanal 
+  g 6/00  CH3COOH          srd 01  OHCH2COOH        g 7/00  C2H5           
+  g 7/00  C2H6             g 8/88  CH3N2CH3         g 8/88  C2H5OH         
+  g 7/00  CH3OCH3          srd 01  CH3O2CH3         g 7/00  CCN            
+  tpis91  CNC              srd 01  OCCN             tpis79  C2N2           
+  g 8/00  C2O              tpis79  *C3              n 4/98  C3H3,1-propynl 
+  n 4/98  C3H3,2-propynl   g 2/00  C3H4,allene      g 1/00  C3H4,propyne   
+  g 5/90  C3H4,cyclo-      g 3/01  C3H5,allyl       g 2/00  C3H6,propylene 
+  g 1/00  C3H6,cyclo-      g 6/01  C3H6O,propylox   g 6/97  C3H6O,acetone  
+  g 1/02  C3H6O,propanal   g 7/01  C3H7,n-propyl    g 9/85  C3H7,i-propyl  
+  g 2/00  C3H8             g 2/00  C3H8O,1propanol  g 2/00  C3H8O,2propanol
+  srd 01  CNCOCN           g 7/88  C3O2             g tpis  *C4            
+  g 7/01  C4H2,butadiyne   g 8/00  C4H4,1,3-cyclo-  n10/92  C4H6,butadiene 
+  n10/93  C4H6,1butyne     n10/93  C4H6,2butyne     g 8/00  C4H6,cyclo-    
+  n 4/88  C4H8,1-butene    n 4/88  C4H8,cis2-buten  n 4/88  C4H8,tr2-butene
+  n 4/88  C4H8,isobutene   g 8/00  C4H8,cyclo-      g10/00  (CH3COOH)2     
+  n10/84  C4H9,n-butyl     n10/84  C4H9,i-butyl     g 1/93  C4H9,s-butyl   
+  g 1/93  C4H9,t-butyl     g12/00  C4H10,n-butane   g 8/00  C4H10,isobutane
+  g 6/01  C4N2             g 8/00  *C5              g 5/90  C5H6,1,3cyclo- 
+  g 1/93  C5H8,cyclo-      n 4/87  C5H10,1-pentene  g 2/01  C5H10,cyclo-   
+  n10/84  C5H11,pentyl     g 1/93  C5H11,t-pentyl   n10/85  C5H12,n-pentane
+  n10/85  C5H12,i-pentane  n10/85  CH3C(CH3)2CH3    g 2/93  C6H2           
+  g11/00  C6H5,phenyl      g 8/00  C6H5O,phenoxy    g 8/00  C6H6           
+  g 8/00  C6H5OH,phenol    g 1/93  C6H10,cyclo-     n 4/87  C6H12,1-hexene 
+  g 6/90  C6H12,cyclo-     n10/83  C6H13,n-hexyl    g 6/01  C6H14,n-hexane 
+  g 7/01  C7H7,benzyl      g 1/93  C7H8             g12/00  C7H8O,cresol-mx
+  n 4/87  C7H14,1-heptene  n10/83  C7H15,n-heptyl   n10/85  C7H16,n-heptane
+  n10/85  C7H16,2-methylh  n 4/89  C8H8,styrene     n10/86  C8H10,ethylbenz
+  n 4/87  C8H16,1-octene   n10/83  C8H17,n-octyl    n 4/85  C8H18,n-octane 
+  n 4/85  C8H18,isooctane  n10/83  C9H19,n-nonyl    g 3/01  C10H8,naphthale
+  n10/83  C10H21,n-decyl   g 8/00  C12H9,o-bipheny  g 8/00  C12H10,biphenyl
+  g 6/97  *H               g 6/01  HCN              g 1/01  HCO            
+  tpis89  HCCN             g 6/01  HCCO             g 6/01  HNC            
+  g 7/00  HNCO             g10/01  HNO              tpis89  HNO2           
+  g 5/99  HNO3             g 4/02  HO2              tpis78  *H2            
+  g 5/01  HCHO,formaldehy  g 6/01  HCOOH            g 8/89  H2O            
+  g 6/99  H2O2             g 6/01  (HCOOH)2         g 5/97  *N             
+  g 6/01  NCO              g 4/99  *NH              g 3/01  NH2            
+  tpis89  NH3              tpis89  NH2OH            tpis89  *NO            
+  g 4/99  NO2              j12/64  NO3              tpis78  *N2            
+  g 6/01  NCN              g 5/99  N2H2             tpis89  NH2NO2         
+  g 4/99  N2H4             g 4/99  N2O              g 4/99  N2O3           
+  tpis89  N2O4             g 4/99  N2O5             tpis89  N3             
+  g 4/99  N3H              g 5/97  *O               g 4/02  *OH            
+  tpis89  *O2              g 8/01  O3               n 4/83  C(gr)          
+  n 4/83  C(gr)            n 4/83  C(gr)            g11/99  H2O(cr)        
+  g 8/01  H2O(L)           g 8/01  H2O(L)         
+
+ O/F =   7.000000
+
+                       EFFECTIVE FUEL     EFFECTIVE OXIDANT        MIXTURE
+ ENTHALPY                  h(2)/R              h(1)/R               h0/R
+ (KG-MOL)(K)/KG       -0.27042744E+03     -0.22939078E+02     -0.53875123E+02
+
+ KG-FORM.WT./KG             bi(2)               bi(1)               b0i
+  *N                   0.00000000E+00      0.21736532E-01      0.19019465E-01
+  *O                   0.00000000E+00      0.43473063E-01      0.38038930E-01
+  *C                   0.70784563E-01      0.00000000E+00      0.88480704E-02
+  *H                   0.14864758E+00      0.00000000E+00      0.18580948E-01
+
+ POINT ITN      T            N           O           C           H 
+
+   1   25    3130.655     -13.339     -14.545     -18.743     -11.304
+
+ Pinf/Pt = 1.729010
+   2    4    2971.454     -13.505     -14.712     -19.380     -11.590
+
+ Pinf/Pt = 1.728577
+   2    1    2971.525     -13.505     -14.712     -19.380     -11.590
+
+
+
+
+
+
+           THEORETICAL ROCKET PERFORMANCE ASSUMING FROZEN COMPOSITION
+                                 AFTER POINT 2
+
+ Pin =   362.6 PSIA
+ CASE = Parafina       
+
+             REACTANT                    WT FRACTION      ENERGY      TEMP
+                                          (SEE NOTE)     KJ/KG-MOL      K  
+ OXIDANT     N2O4(L)                      1.0000000    -17549.000    298.150
+ FUEL        Parafina                     1.0000000   -635300.000    298.150
+
+ O/F=    7.00000  %FUEL= 12.500000  R,EQ.RATIO= 0.709447  PHI,EQ.RATIO= 0.709447
+
+                 CHAMBER   THROAT     EXIT
+ Pinf/P            1.0000   1.7286   26.400
+ P, BAR            25.000   14.463  0.94697
+ T, K             3130.66  2971.53  1814.18
+ RHO, KG/CU M    2.7440 0 1.6906 0 1.8131-1
+ H, KJ/KG         -447.95  -931.19 -2776.93
+ U, KJ/KG        -1359.02 -1786.68 -3299.23
+ G, KJ/KG        -30789.7 -29730.7 -20359.6
+ S, KJ/(KG)(K)     9.6918   9.6918   9.6918
+
+ M, (1/n)          28.570   28.880   28.880
+ Cp, KJ/(KG)(K)    4.3938   4.1334   1.5348
+ GAMMAs            1.1304   1.1298   1.2309
+ SON VEL,M/SEC     1014.8    983.1    801.8
+ MACH NUMBER        0.000    1.000    2.692
+
+ PERFORMANCE PARAMETERS
+
+ Ae/At                      1.0000   4.2473
+ CSTAR, M/SEC               1504.2   1504.2
+ CF                         0.6536   1.4348
+ Ivac, M/SEC                1853.3   2400.2
+ Isp, M/SEC                  983.1   2158.2
+
+ MASS FRACTIONS
+
+ *CO             0.04088   *CO2            0.32517   *H              0.00011
+ HO2             0.00011   *H2             0.00045   H2O             0.14985
+ H2O2            0.00001   *NO             0.02398   NO2             0.00007
+ *N2             0.25518   *O              0.00593   *OH             0.02359
+ *O2             0.17465
+
+  * THERMODYNAMIC PROPERTIES FITTED TO 20000.K
+
+    PRODUCTS WHICH WERE CONSIDERED BUT WHOSE MASS FRACTIONS
+    WERE LESS THAN 5.000000E-06 FOR ALL ASSIGNED CONDITIONS
+
+
+
+ NOTE. WEIGHT FRACTION OF FUEL IN TOTAL FUELS AND OF OXIDANT IN TOTAL OXIDANTS
+
+
+
+
+
+
+ O/F =   7.500000
+
+                       EFFECTIVE FUEL     EFFECTIVE OXIDANT        MIXTURE
+ ENTHALPY                  h(2)/R              h(1)/R               h0/R
+ (KG-MOL)(K)/KG       -0.27042744E+03     -0.22939078E+02     -0.52055356E+02
+
+ KG-FORM.WT./KG             bi(2)               bi(1)               b0i
+  *N                   0.00000000E+00      0.21736532E-01      0.19179293E-01
+  *O                   0.00000000E+00      0.43473063E-01      0.38358585E-01
+  *C                   0.70784563E-01      0.00000000E+00      0.83275957E-02
+  *H                   0.14864758E+00      0.00000000E+00      0.17487951E-01
+
+ POINT ITN      T            N           O           C           H 
+
+   1    4    3077.727     -13.297     -14.441     -19.108     -11.411
+
+ Pinf/Pt = 1.730689
+   2    4    2914.391     -13.461     -14.603     -19.803     -11.711
+
+ Pinf/Pt = 1.731110
+   2    1    2914.320     -13.461     -14.603     -19.803     -11.712
+
+
+
+
+
+
+           THEORETICAL ROCKET PERFORMANCE ASSUMING FROZEN COMPOSITION
+                                 AFTER POINT 2
+
+ Pin =   362.6 PSIA
+ CASE = Parafina       
+
+             REACTANT                    WT FRACTION      ENERGY      TEMP
+                                          (SEE NOTE)     KJ/KG-MOL      K  
+ OXIDANT     N2O4(L)                      1.0000000    -17549.000    298.150
+ FUEL        Parafina                     1.0000000   -635300.000    298.150
+
+ O/F=    7.50000  %FUEL= 11.764706  R,EQ.RATIO= 0.662151  PHI,EQ.RATIO= 0.662151
+
+                 CHAMBER   THROAT     EXIT
+ Pinf/P            1.0000   1.7311   26.400
+ P, BAR            25.000   14.442  0.94697
+ T, K             3077.73  2914.32  1775.17
+ RHO, KG/CU M    2.8214 0 1.7385 0 1.8715-1
+ H, KJ/KG         -432.81  -903.71 -2693.20
+ U, KJ/KG        -1318.90 -1734.40 -3199.19
+ G, KJ/KG        -29879.9 -28787.4 -19677.7
+ S, KJ/(KG)(K)     9.5678   9.5678   9.5678
+
+ M, (1/n)          28.880   29.170   29.170
+ Cp, KJ/(KG)(K)    4.0040   3.7084   1.5110
+ GAMMAs            1.1332   1.1337   1.2325
+ SON VEL,M/SEC     1002.0    970.5    789.7
+ MACH NUMBER        0.000    1.000    2.692
+
+ PERFORMANCE PARAMETERS
+
+ Ae/At                      1.0000   4.2399
+ CSTAR, M/SEC               1481.8   1481.8
+ CF                         0.6549   1.4349
+ Ivac, M/SEC                1826.4   2364.2
+ Isp, M/SEC                  970.5   2126.2
+
+ MASS FRACTIONS
+
+ *CO             0.03008   *CO2            0.31924   *H              0.00008
+ HO2             0.00011   *H2             0.00033   H2O             0.14280
+ H2O2            0.00001   *NO             0.02397   NO2             0.00008
+ *N2             0.25742   *O              0.00515   *OH             0.02094
+ *O2             0.19980
+
+  * THERMODYNAMIC PROPERTIES FITTED TO 20000.K
+
+    PRODUCTS WHICH WERE CONSIDERED BUT WHOSE MASS FRACTIONS
+    WERE LESS THAN 5.000000E-06 FOR ALL ASSIGNED CONDITIONS
+
+
+
+ NOTE. WEIGHT FRACTION OF FUEL IN TOTAL FUELS AND OF OXIDANT IN TOTAL OXIDANTS
+
+
+
+
+
+
+ O/F =   8.000000
+
+                       EFFECTIVE FUEL     EFFECTIVE OXIDANT        MIXTURE
+ ENTHALPY                  h(2)/R              h(1)/R               h0/R
+ (KG-MOL)(K)/KG       -0.27042744E+03     -0.22939078E+02     -0.50437785E+02
+
+ KG-FORM.WT./KG             bi(2)               bi(1)               b0i
+  *N                   0.00000000E+00      0.21736532E-01      0.19321361E-01
+  *O                   0.00000000E+00      0.43473063E-01      0.38642723E-01
+  *C                   0.70784563E-01      0.00000000E+00      0.78649515E-02
+  *H                   0.14864758E+00      0.00000000E+00      0.16516398E-01
+
+ POINT ITN      T            N           O           C           H 
+
+   1    3    3023.099     -13.256     -14.347     -19.474     -11.515
+
+ Pinf/Pt = 1.732730
+   2    4    2854.944     -13.415     -14.503     -20.232     -11.833
+
+ Pinf/Pt = 1.734142
+   2    2    2854.697     -13.415     -14.503     -20.233     -11.833
+
+
+
+
+
+
+           THEORETICAL ROCKET PERFORMANCE ASSUMING FROZEN COMPOSITION
+                                 AFTER POINT 2
+
+ Pin =   362.6 PSIA
+ CASE = Parafina       
+
+             REACTANT                    WT FRACTION      ENERGY      TEMP
+                                          (SEE NOTE)     KJ/KG-MOL      K  
+ OXIDANT     N2O4(L)                      1.0000000    -17549.000    298.150
+ FUEL        Parafina                     1.0000000   -635300.000    298.150
+
+ O/F=    8.00000  %FUEL= 11.111111  R,EQ.RATIO= 0.620766  PHI,EQ.RATIO= 0.620766
+
+                 CHAMBER   THROAT     EXIT
+ Pinf/P            1.0000   1.7341   26.400
+ P, BAR            25.000   14.416  0.94697
+ T, K             3023.10  2854.70  1734.15
+ RHO, KG/CU M    2.8984 0 1.7863 0 1.9315-1
+ H, KJ/KG         -419.37  -878.80 -2614.24
+ U, KJ/KG        -1281.90 -1685.87 -3104.51
+ G, KJ/KG        -29003.2 -27870.3 -19010.9
+ S, KJ/(KG)(K)     9.4551   9.4551   9.4551
+
+ M, (1/n)          29.141   29.409   29.409
+ Cp, KJ/(KG)(K)    3.6488   3.3318   1.4888
+ GAMMAs            1.1365   1.1385   1.2344
+ SON VEL,M/SEC      990.1    958.6    777.9
+ MACH NUMBER        0.000    1.000    2.693
+
+ PERFORMANCE PARAMETERS
+
+ Ae/At                      1.0000   4.2311
+ CSTAR, M/SEC               1460.1   1460.1
+ CF                         0.6565   1.4350
+ Ivac, M/SEC                1800.5   2329.2
+ Isp, M/SEC                  958.6   2095.2
+
+ MASS FRACTIONS
+
+ *CO             0.02187   *CO2            0.31177   *H              0.00005
+ HO2             0.00011   *H2             0.00024   H2O             0.13645
+ H2O2            0.00001   *NO             0.02354   NO2             0.00009
+ *N2             0.25961   *O              0.00435   *OH             0.01831
+ *O2             0.22359
+
+  * THERMODYNAMIC PROPERTIES FITTED TO 20000.K
+
+    PRODUCTS WHICH WERE CONSIDERED BUT WHOSE MASS FRACTIONS
+    WERE LESS THAN 5.000000E-06 FOR ALL ASSIGNED CONDITIONS
+
+
+
+ NOTE. WEIGHT FRACTION OF FUEL IN TOTAL FUELS AND OF OXIDANT IN TOTAL OXIDANTS
+
+
+
+
+
+
+ O/F =   8.500000
+
+                       EFFECTIVE FUEL     EFFECTIVE OXIDANT        MIXTURE
+ ENTHALPY                  h(2)/R              h(1)/R               h0/R
+ (KG-MOL)(K)/KG       -0.27042744E+03     -0.22939078E+02     -0.48990485E+02
+
+ KG-FORM.WT./KG             bi(2)               bi(1)               b0i
+  *N                   0.00000000E+00      0.21736532E-01      0.19448476E-01
+  *O                   0.00000000E+00      0.43473063E-01      0.38896951E-01
+  *C                   0.70784563E-01      0.00000000E+00      0.74510067E-02
+  *H                   0.14864758E+00      0.00000000E+00      0.15647114E-01
+
+ POINT ITN      T            N           O           C           H 
+
+   1    3    2967.167     -13.213     -14.260     -19.843     -11.619
+
+ Pinf/Pt = 1.735119
+   2    4    2793.659     -13.368     -14.410     -20.672     -11.955
+
+ Pinf/Pt = 1.737636
+   2    2    2793.205     -13.369     -14.411     -20.675     -11.956
+
+
+
+
+
+
+           THEORETICAL ROCKET PERFORMANCE ASSUMING FROZEN COMPOSITION
+                                 AFTER POINT 2
+
+ Pin =   362.6 PSIA
+ CASE = Parafina       
+
+             REACTANT                    WT FRACTION      ENERGY      TEMP
+                                          (SEE NOTE)     KJ/KG-MOL      K  
+ OXIDANT     N2O4(L)                      1.0000000    -17549.000    298.150
+ FUEL        Parafina                     1.0000000   -635300.000    298.150
+
+ O/F=    8.50000  %FUEL= 10.526316  R,EQ.RATIO= 0.584251  PHI,EQ.RATIO= 0.584251
+
+                 CHAMBER   THROAT     EXIT
+ Pinf/P            1.0000   1.7376   26.400
+ P, BAR            25.000   14.387  0.94697
+ T, K             2967.17  2793.21  1691.63
+ RHO, KG/CU M    2.9754 0 1.8341 0 1.9933-1
+ H, KJ/KG         -407.33  -856.04 -2539.32
+ U, KJ/KG        -1247.55 -1640.47 -3014.39
+ G, KJ/KG        -28156.7 -26978.5 -18359.7
+ S, KJ/(KG)(K)     9.3521   9.3521   9.3521
+
+ M, (1/n)          29.362   29.606   29.606
+ Cp, KJ/(KG)(K)    3.3309   3.0050   1.4679
+ GAMMAs            1.1404   1.1441   1.2366
+ SON VEL,M/SEC      978.9    947.3    766.5
+ MACH NUMBER        0.000    1.000    2.694
+
+ PERFORMANCE PARAMETERS
+
+ Ae/At                      1.0000   4.2212
+ CSTAR, M/SEC               1438.8   1438.8
+ CF                         0.6584   1.4351
+ Ivac, M/SEC                1775.4   2295.0
+ Isp, M/SEC                  947.3   2064.9
+
+ MASS FRACTIONS
+
+ *CO             0.01570   *CO2            0.30325   *H              0.00004
+ HO2             0.00010   *H2             0.00017   H2O             0.13069
+ H2O2            0.00001   *NO             0.02279   NO2             0.00009
+ *N2             0.26174   *O              0.00359   *OH             0.01581
+ *O2             0.24602
+
+  * THERMODYNAMIC PROPERTIES FITTED TO 20000.K
+
+    PRODUCTS WHICH WERE CONSIDERED BUT WHOSE MASS FRACTIONS
+    WERE LESS THAN 5.000000E-06 FOR ALL ASSIGNED CONDITIONS
+
+
+
+ NOTE. WEIGHT FRACTION OF FUEL IN TOTAL FUELS AND OF OXIDANT IN TOTAL OXIDANTS
+
+
+
+
+
+
+ O/F =   9.000000
+
+                       EFFECTIVE FUEL     EFFECTIVE OXIDANT        MIXTURE
+ ENTHALPY                  h(2)/R              h(1)/R               h0/R
+ (KG-MOL)(K)/KG       -0.27042744E+03     -0.22939078E+02     -0.47687914E+02
+
+ KG-FORM.WT./KG             bi(2)               bi(1)               b0i
+  *N                   0.00000000E+00      0.21736532E-01      0.19562878E-01
+  *O                   0.00000000E+00      0.43473063E-01      0.39125757E-01
+  *C                   0.70784563E-01      0.00000000E+00      0.70784563E-02
+  *H                   0.14864758E+00      0.00000000E+00      0.14864758E-01
+
+ POINT ITN      T            N           O           C           H 
+
+   1    3    2910.259     -13.170     -14.179     -20.219     -11.723
+
+ Pinf/Pt = 1.737833
+   2    4    2731.045     -13.321     -14.323     -21.125     -12.080
+
+ Pinf/Pt = 1.741530
+   2    2    2730.357     -13.322     -14.324     -21.129     -12.082
+
+
+
+
+
+
+           THEORETICAL ROCKET PERFORMANCE ASSUMING FROZEN COMPOSITION
+                                 AFTER POINT 2
+
+ Pin =   362.6 PSIA
+ CASE = Parafina       
+
+             REACTANT                    WT FRACTION      ENERGY      TEMP
+                                          (SEE NOTE)     KJ/KG-MOL      K  
+ OXIDANT     N2O4(L)                      1.0000000    -17549.000    298.150
+ FUEL        Parafina                     1.0000000   -635300.000    298.150
+
+ O/F=    9.00000  %FUEL= 10.000000  R,EQ.RATIO= 0.551792  PHI,EQ.RATIO= 0.551792
+
+                 CHAMBER   THROAT     EXIT
+ Pinf/P            1.0000   1.7415   26.400
+ P, BAR            25.000   14.355  0.94697
+ T, K             2910.26  2730.36  1648.07
+ RHO, KG/CU M    3.0528 0 1.8823 0 2.0571-1
+ H, KJ/KG         -396.50  -835.10 -2467.89
+ U, KJ/KG        -1215.43 -1597.74 -2928.23
+ G, KJ/KG        -27338.1 -26111.3 -17724.9
+ S, KJ/(KG)(K)     9.2575   9.2575   9.2575
+
+ M, (1/n)          29.548   29.767   29.767
+ Cp, KJ/(KG)(K)    3.0503   2.7261   1.4483
+ GAMMAs            1.1448   1.1502   1.2389
+ SON VEL,M/SEC      968.3    936.6    755.2
+ MACH NUMBER        0.000    1.000    2.695
+
+ PERFORMANCE PARAMETERS
+
+ Ae/At                      1.0000   4.2105
+ CSTAR, M/SEC               1418.1   1418.1
+ CF                         0.6605   1.4353
+ Ivac, M/SEC                1750.9   2261.6
+ Isp, M/SEC                  936.6   2035.4
+
+ MASS FRACTIONS
+
+ *CO             0.01112   *CO2            0.29405   *H              0.00002
+ HO2             0.00009   *H2             0.00012   H2O             0.12542
+ H2O2            0.00001   *NO             0.02178   NO2             0.00010
+ *N2             0.26381   *O              0.00290   *OH             0.01348
+ *O2             0.26710
+
+  * THERMODYNAMIC PROPERTIES FITTED TO 20000.K
+
+    PRODUCTS WHICH WERE CONSIDERED BUT WHOSE MASS FRACTIONS
+    WERE LESS THAN 5.000000E-06 FOR ALL ASSIGNED CONDITIONS
+
+
+
+ NOTE. WEIGHT FRACTION OF FUEL IN TOTAL FUELS AND OF OXIDANT IN TOTAL OXIDANTS
+
+
+

@@ -1,0 +1,6 @@
+numpy==1.19.2
+pandas==1.1.3
+Jinja2==2.11.2
+pyqtgraph==0.11.0
+PyQt5==5.15.4
+wine-ctl==2.1

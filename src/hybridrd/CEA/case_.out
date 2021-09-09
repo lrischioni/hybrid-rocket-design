@@ -1,0 +1,28 @@
+
+ *******************************************************************************
+
+         NASA-GLENN CHEMICAL EQUILIBRIUM PROGRAM CEA2, MAY 21, 2004
+                   BY  BONNIE MCBRIDE AND SANFORD GORDON
+      REFS: NASA RP-1311, PART I, 1994 AND NASA RP-1311, PART II, 1996
+
+ *******************************************************************************
+
+
+
+ problem  rocket  equilibrium o/f=1.6514,
+  p,bar=5
+        reactants
+  fuel = C5O2H8(L) wt=100  t,k=400
+  oxid = O2(L) wt=100  t,k=298
+  output  short trans
+  end
+
+ YOUR ASSIGNED TEMPERATURE  400.00K FOR C5O2H8(L)      
+IS OUTSIDE ITS TEMPERATURE RANGE20000.00 TO     0.00K (REACT)
+
+ ERROR IN REACTANTS DATASET (INPUT)
+
+ FATAL ERROR IN DATASET (INPUT)
+
+
+

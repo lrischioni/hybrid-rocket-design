@@ -1,0 +1,132 @@
+
+ *******************************************************************************
+
+         NASA-GLENN CHEMICAL EQUILIBRIUM PROGRAM CEA2, MAY 21, 2004
+                   BY  BONNIE MCBRIDE AND SANFORD GORDON
+      REFS: NASA RP-1311, PART I, 1994 AND NASA RP-1311, PART II, 1996
+
+ *******************************************************************************
+
+
+
+ problem
+     det   t,k=300,  p,bar=1,
+ react
+   fuel=H2 moles=1  t,k=298
+   oxid=O2 moles=0.5  t,k=298
+ output
+  end
+
+ OPTIONS: TP=F  HP=F  SP=F  TV=F  UV=F  SV=F  DETN=T  SHOCK=F  REFL=F  INCD=F
+ RKT=F  FROZ=F  EQL=F  IONS=F  SIUNIT=T  DEBUGF=F  SHKDBG=F  DETDBG=F  TRNSPT=F
+
+ T,K =   300.0000
+
+ TRACE= 0.00E+00  S/R= 0.000000E+00  H/R= 0.000000E+00  U/R= 0.000000E+00
+
+ P,BAR =     1.000000
+
+    REACTANT           MOLES    (ENERGY/R),K   TEMP,K  DENSITY
+        EXPLODED FORMULA
+ F: H2               1.000000  -0.520220E+00   298.00  0.0000
+          H  2.00000
+ O: O2               0.500000  -0.530002E+00   298.00  0.0000
+          O  2.00000
+
+  SPECIES BEING CONSIDERED IN THIS SYSTEM
+ (CONDENSED PHASE MAY HAVE NAME LISTED SEVERAL TIMES)
+  LAST thermo.inp UPDATE:    9/09/04
+
+  g 6/97  *H               g 4/02  HO2              tpis78  *H2            
+  g 8/89  H2O              g 6/99  H2O2             g 5/97  *O             
+  g 4/02  *OH              tpis89  *O2              g 8/01  O3             
+  g11/99  H2O(cr)          g 8/01  H2O(L)           g 8/01  H2O(L)         
+
+ O/F =   7.936683
+
+                       EFFECTIVE FUEL     EFFECTIVE OXIDANT        MIXTURE
+ ENTHALPY                  h(2)/R              h(1)/R               h0/R
+ (KG-MOL)(K)/KG       -0.25806109E+00     -0.16563198E-01     -0.43586412E-01
+
+ KG-FORM.WT./KG             bi(2)               bi(1)               b0i
+  *H                   0.99212255E+00      0.00000000E+00      0.11101687E+00
+  *O                   0.00000000E+00      0.62502344E-01      0.55508435E-01
+
+ POINT ITN      T            H           O 
+   1    8    3605.449     -10.322     -15.691
+
+ POINT ITN      T            H           O 
+   1    3    3632.365     -10.242     -15.616
+
+ POINT ITN      T            H           O 
+   1    3    3674.556     -10.238     -15.617
+
+ POINT ITN      T            H           O 
+   1    2    3673.327     -10.238     -15.617
+
+
+                     DETONATION PROPERTIES OF AN IDEAL REACTING GAS
+ CASE =                
+
+             REACTANT                       MOLES         ENERGY      TEMP
+                                                         KJ/KG-MOL      K
+ FUEL        H2                           1.0000000        -4.325    298.000
+ OXIDANT     O2                           0.5000000        -4.407    298.000
+
+ O/F=    7.93668  %FUEL= 11.189834  R,EQ.RATIO= 1.000000  PHI,EQ.RATIO= 1.000000
+
+ UNBURNED GAS
+
+ P1, BAR           1.0000
+ T1, K             300.00
+ H1, KJ/KG           4.47
+ M1, (1/n)         12.010
+ GAMMA1            1.4014
+ SON VEL1,M/SEC     539.5
+
+ BURNED GAS
+
+ P, BAR            18.648
+ T, K             3673.33
+ RHO, KG/CU M    8.8518-1
+ H, KJ/KG         2834.01
+ U, KJ/KG          727.29
+ G, KJ/KG        -61191.3
+ S, KJ/(KG)(K)    17.4298
+
+ M, (1/n)          14.497
+ (dLV/dLP)t      -1.08202
+ (dLV/dLT)p        2.3596
+ Cp, KJ/(KG)(K)   16.2840
+ GAMMAs            1.1288
+ SON VEL,M/SEC     1542.1
+
+ DETONATION PARAMETERS
+
+ P/P1              18.648
+ T/T1              12.244
+ M/M1              1.2071
+ RHO/RHO1          1.8384
+ DET MACH NUMBER   5.2548
+ DET VEL,M/SEC     2834.9
+
+ MOLE FRACTIONS
+
+ *H               0.08019
+ HO2              0.00018
+ *H2              0.16216
+ H2O              0.53163
+ H2O2             0.00002
+ *O               0.03748
+ *OH              0.14145
+ *O2              0.04688
+
+  * THERMODYNAMIC PROPERTIES FITTED TO 20000.K
+
+    PRODUCTS WHICH WERE CONSIDERED BUT WHOSE MOLE FRACTIONS
+    WERE LESS THAN 5.000000E-06 FOR ALL ASSIGNED CONDITIONS
+
+ O3              H2O(cr)         H2O(L)         
+
+
+

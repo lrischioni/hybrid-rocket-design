@@ -1,0 +1,118 @@
+
+ *******************************************************************************
+
+         NASA-GLENN CHEMICAL EQUILIBRIUM PROGRAM CEA2, MAY 21, 2004
+                   BY  BONNIE MCBRIDE AND SANFORD GORDON
+      REFS: NASA RP-1311, PART I, 1994 AND NASA RP-1311, PART II, 1996
+
+ *******************************************************************************
+
+
+
+ problem   case=MonoN2O
+       rocket  frozen  nfz=1  tcest,k=
+   p,bar=5,
+   pi/p=5.16,
+  WARNING!!  DID NOT RECOGNIZE tcest,k         (INPUT)
+
+ react
+   oxid=N2O wt=1
+  end
+
+ OPTIONS: TP=F  HP=F  SP=F  TV=F  UV=F  SV=F  DETN=F  SHOCK=F  REFL=F  INCD=F
+ RKT=T  FROZ=T  EQL=F  IONS=F  SIUNIT=T  DEBUGF=F  SHKDBG=F  DETDBG=F  TRNSPT=F
+
+ TRACE= 0.00E+00  S/R= 0.000000E+00  H/R= 0.000000E+00  U/R= 0.000000E+00
+
+ Pc,BAR =     5.000000
+
+ Pc/P =     5.1600
+
+ SUBSONIC AREA RATIOS =
+
+ SUPERSONIC AREA RATIOS =
+
+ NFZ=  1  Mdot/Ac= 0.000000E+00  Ac/At= 0.000000E+00
+
+    REACTANT          WT.FRAC   (ENERGY/R),K   TEMP,K  DENSITY
+        EXPLODED FORMULA
+  : N2O              1.000000   0.000000E+00     0.00  0.0000
+          N  2.00000  O  1.00000
+
+  SPECIES BEING CONSIDERED IN THIS SYSTEM
+ (CONDENSED PHASE MAY HAVE NAME LISTED SEVERAL TIMES)
+  LAST thermo.inp UPDATE:    9/09/04
+
+  g 5/97  *N               tpis89  *NO              g 4/99  NO2            
+  j12/64  NO3              tpis78  *N2              g 4/99  N2O            
+  g 4/99  N2O3             tpis89  N2O4             g 4/99  N2O5           
+  tpis89  N3               g 5/97  *O               tpis89  *O2            
+  g 8/01  O3             
+
+ O/F =   0.000000
+
+                       EFFECTIVE FUEL     EFFECTIVE OXIDANT        MIXTURE
+ ENTHALPY                  h(2)/R              h(1)/R               h0/R
+ (KG-MOL)(K)/KG        0.00000000E+00      0.00000000E+00      0.00000000E+00
+
+ KG-FORM.WT./KG             bi(2)               bi(1)               b0i
+  *N                   0.45441326E-01      0.45441326E-01      0.45441326E-01
+  *O                   0.22720663E-01      0.22720663E-01      0.22720663E-01
+
+ POINT ITN      T            N           O 
+   1   16     298.150     -10.921     -12.081
+
+
+
+
+
+           THEORETICAL ROCKET PERFORMANCE ASSUMING FROZEN COMPOSITION
+
+ Pin =    72.5 PSIA
+ CASE = MonoN2O        
+
+             REACTANT                    WT FRACTION      ENERGY      TEMP
+                                          (SEE NOTE)     KJ/KG-MOL      K  
+             N2O                          1.0000000         0.000      0.000
+
+ O/F=    0.00000  %FUEL=100.000000  R,EQ.RATIO= 0.000000  PHI,EQ.RATIO= 0.000000
+
+                 CHAMBER   THROAT     EXIT
+ Pinf/P            1.0000   1.8925   5.1600
+ P, BAR            5.0000   2.6420  0.96899
+ T, K              298.15   248.58   186.68
+ RHO, KG/CU M    5.9182 0 3.7507 0 1.8318 0
+ H, KJ/KG         0.00000  -49.280  -110.72
+ U, KJ/KG         -84.486  -119.72  -163.62
+ G, KJ/KG        -1910.66 -1642.28 -1307.03
+ S, KJ/(KG)(K)     6.4084   6.4084   6.4084
+
+ M, (1/n)          29.342   29.342   29.342
+ Cp, KJ/(KG)(K)    0.9955   0.9932   0.9920
+ GAMMAs            1.3979   1.3992   1.3999
+ SON VEL,M/SEC      343.7    313.9    272.1
+ MACH NUMBER        0.000    1.000    1.729
+
+ PERFORMANCE PARAMETERS
+
+ Ae/At                      1.0000   1.3660
+ CSTAR, M/SEC                424.6    424.6
+ CF                         0.7393   1.1082
+ Ivac, M/SEC                 538.3    583.0
+ Isp, M/SEC                  313.9    470.6
+
+ MOLE FRACTIONS
+
+ *N2             0.66667   *O2             0.33333
+
+  * THERMODYNAMIC PROPERTIES FITTED TO 20000.K
+
+    PRODUCTS WHICH WERE CONSIDERED BUT WHOSE MOLE FRACTIONS
+    WERE LESS THAN 5.000000E-06 FOR ALL ASSIGNED CONDITIONS
+
+
+
+ NOTE. WEIGHT FRACTION OF FUEL IN TOTAL FUELS AND OF OXIDANT IN TOTAL OXIDANTS
+
+
+

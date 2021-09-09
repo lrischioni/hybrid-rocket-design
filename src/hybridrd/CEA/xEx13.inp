@@ -1,0 +1,23 @@
+!EXAMPLE 13:
+!   (a)  Rocket problem with an infinite-area combustor (rocket). This
+!        problem was selected to show some unusual derivatives.
+!   (b)  Tripropellant.  Fuels are N2H4(L) and Be(L) and oxidant is H2O2(L), 
+!        all at 298.15 K.
+!   (c)  Reactant mixture is given as 67% fuel by weight (%fuel=67.).
+!   (d)  Chamber pressure is 3000 psia (p,psia=3000).
+!   (e)  Calculations are to be for equilibrium conditions only (equilibrium).
+!   (f)  Four exit pressure ratios are assigned (pi/p=3,10,30,300).
+!   (g)  BeO(L) is included as possible combustion product for the first 
+!        point (insert).
+!   (h)  Mole fractions > 1.e-10 are to be in e-format (trace=1.e-10).
+!   (i)  Units in final tables to be non-SI (calories).
+
+        
+reac fuel=N2H4(L)    wt%=80   t=298.15  
+     fuel=Be(a)      wt%=20   t=298.15  
+     oxid=H2O2(L)    wt%=100  t=298.15
+prob  rocket  case=13  p,psia=3000, pi/p=3,10,30,300  equilibrium   %fuel=67.
+
+outp  trace=1.e-10 calories
+insert  BeO(L)
+end

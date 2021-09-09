@@ -1,0 +1,18 @@
+language: python
+
+python:
+  - "3.8"
+
+before_install:
+  - sudo apt-get -y install wine-stable
+
+install: pip install tox-travis
+
+script: tox
+
+notifications:
+  email:
+    recipients:
+      - lucasgrischioni@gmail.com
+    on_sucess: always
+    on_failure: always

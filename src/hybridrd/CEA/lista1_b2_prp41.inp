@@ -1,0 +1,7 @@
+problem    o/f=1.64,
+      rocket  frozen  nfz=1 
+  p,bar=50,
+react  
+  fuel=C2H5OH(L) wt=1.  t,k=300  
+  oxid=O2(L) wt=1.  t,k=90.17  
+end

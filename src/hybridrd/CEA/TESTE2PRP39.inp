@@ -1,0 +1,10 @@
+problem    o/f=1.57,
+      rocket  frozen  nfz=2 
+  p,bar=5,
+  pi/p=5.2,
+react  
+  fuel=sorbitol  wt=1  t,k=298.15  
+    h,kj/mol=-1356.7  C 6 H 14 O 6 
+  oxid=KNO3  wt=1  t,k=298.15  
+    h,kj/mol=-494  K 1 N 1 O 3 
+end

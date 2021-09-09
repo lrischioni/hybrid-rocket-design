@@ -1,0 +1,10 @@
+problem    o/f=0.5,1.5,2.5,3.5,4.5,5.5,6.5,7.5,8.5,
+    rocket  frozen  nfz=2  tcest,k=3800
+  p,bar=25,
+  pi/p=26.04,
+react  
+  oxid=H2O2(L) wt=90  t,k=298.15  
+  oxid=H2O(L) wt=10  t,k=298.15  
+  fuel=Etanol  t,k=298.15  
+    h,kj/mol=-276  C 2 H 6 O 1 
+end

@@ -1,0 +1,8 @@
+problem    phi,eq.ratio=0.6,0.8,1,1.2,1.4,
+    det   t,k=298.15,  p,atm=1,
+react  
+  fuel=H2 t,k=298.15  
+  oxid=O2 t,k=298.15  
+output    trace=  
+    plot u 
+end

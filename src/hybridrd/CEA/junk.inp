@@ -1,0 +1,7 @@
+problem   case=MonoN2O
+      rocket  frozen  nfz=1  tcest,k=3800
+  p,bar=5,
+  pi/p=5.16,
+react  
+  oxid=N2O wt=1  
+ end

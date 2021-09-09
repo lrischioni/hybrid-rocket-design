@@ -1,0 +1,13 @@
+<RCC>
+  <qresource prefix="icons">
+    <file alias="logo.png">icons/logo.png</file>
+    <file alias="checkbox.png">icons/checkbox.png</file>
+    <file alias="down_arrow.png">icons/down_arrow.png</file>
+    <file alias="down_button.png">icons/down_button.png</file>
+    <file alias="up_button.png">icons/up_button.png</file>
+  </qresource>
+  <qresource prefix="stylesheets">
+    <file alias="darktheme.qss">stylesheets/darktheme.qss</file>
+    <file alias="lighttheme.qss">stylesheets/lighttheme.qss</file>
+  </qresource>
+</RCC>

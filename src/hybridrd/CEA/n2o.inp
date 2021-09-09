@@ -1,0 +1,14 @@
+      
+     prob           
+case=MonoN2O rocket frozen nfz=1                                                                                        
+t,k=1000                                                                                                                
+p,bar=5                                                                                                                 
+pi/pe=5.16                                                                                                              
+      
+     reac           
+oxid=N2O wt=1                                                                                                           
+      
+     outp           
+trace=                                                                                                                  
+      
+     end            

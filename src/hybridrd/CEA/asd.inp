@@ -1,0 +1,6 @@
+problem   
+    tp   t,k=500,  p,atm=25,
+react  
+  fuel=C8H18,n-octane moles=1  
+  oxid=Air moles=12.5  
+end

@@ -1,0 +1,11 @@
+problem   case=Monoprop
+    rocket  frozen  nfz=1  tcest,k=3800
+  p,bar=5,
+  pi/p=5.26,
+react  
+  fuel=H2O2(L) wt=80  t,k=298.16  
+  fuel=H2O(L) wt=20  t,k=298.16  
+output  
+     siunits
+    plot aeat cf ivac isp 
+end

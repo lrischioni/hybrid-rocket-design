@@ -1,0 +1,9 @@
+problem o/f=1.12, 
+      rocket frozen nfz=2 
+  p,bar=5.0, 
+  pi/p=5.208, 
+react  
+  oxid=O2 wt=1.0 t,k=298.15 
+  fuel=PMMA wt=1.0 t,k=298.15 
+    h,kj/mol=-184.5  C 5 O 2 H 8
+end

@@ -1,0 +1,7 @@
+problem    phi,eq.ratio=1,
+    det   t,k=298,  p,bar=1,
+react  
+  oxid=O2 wt=21  t,k=298  
+  fuel=CH4 wt=1  t,k=298  
+  oxid=N2 wt=79  t,k=298  
+ end

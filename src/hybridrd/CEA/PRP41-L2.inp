@@ -1,0 +1,11 @@
+      
+     prob           
+o/f=2.1281 rocket frozen nfz=2                                                                                          
+p,bar=12.87                                                                                                             
+pi/pe=1356.450253                                                                                                       
+      
+     reac           
+oxid=N2O4(L) wt=1. t,k=298.15                                                                                           
+fuel=MMH wt=1. t,k=298.15 h,kj/mol=54.14 C 1 H 6 N 2                                                                    
+      
+     end            

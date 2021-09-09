@@ -1,0 +1,14 @@
+      
+     prob           
+case=Parafina o/f=7,7.5,8,8.5,9 rocket frozen nfz=2 tcest,k=3800                                                        
+p,bar=25                                                                                                                
+pi/pe=26.4                                                                                                              
+      
+     reac           
+oxid=N2O4(L)                                                                                                            
+fuel=Parafina t,k=298.15 h,kj/mol=-635.3 C 20 H 42                                                                      
+      
+     outp           
+massf plot isp                                                                                                          
+      
+     end            

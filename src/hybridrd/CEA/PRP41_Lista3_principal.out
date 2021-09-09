@@ -1,0 +1,127 @@
+
+ *******************************************************************************
+
+         NASA-GLENN CHEMICAL EQUILIBRIUM PROGRAM CEA2, MAY 21, 2004
+                   BY  BONNIE MCBRIDE AND SANFORD GORDON
+      REFS: NASA RP-1311, PART I, 1994 AND NASA RP-1311, PART II, 1996
+
+ *******************************************************************************
+
+
+
+ problem    o/f=2.017745455,
+     rocket  frozen  nfz=2  tcest,k=3800
+   p,bar=83.99681517,
+   pi/p=1587.541394,
+ react
+   fuel=H2 moles=0.87175  t,k=973.5879208
+   oxid=O2(L) moles=1.  t,k=90.17
+   name=H2O moles=0.12825  t,k=973.5879208
+ end
+
+ OPTIONS: TP=F  HP=F  SP=F  TV=F  UV=F  SV=F  DETN=F  SHOCK=F  REFL=F  INCD=F
+ RKT=T  FROZ=T  EQL=F  IONS=F  SIUNIT=T  DEBUGF=F  SHKDBG=F  DETDBG=F  TRNSPT=F
+
+ TRACE= 0.00E+00  S/R= 0.000000E+00  H/R= 0.000000E+00  U/R= 0.000000E+00
+
+ Pc,BAR =    83.996815
+
+ Pc/P =  1587.5414
+
+ SUBSONIC AREA RATIOS =
+
+ SUPERSONIC AREA RATIOS =
+
+ NFZ=  2  Mdot/Ac= 0.000000E+00  Ac/At= 0.000000E+00
+
+    REACTANT           MOLES    (ENERGY/R),K   TEMP,K  DENSITY
+        EXPLODED FORMULA
+ F: H2               0.871750   0.239131E+04   973.59  0.0000
+          H  2.00000
+ O: O2(L)            1.000000  -0.156101E+04    90.17  0.0000
+          O  2.00000
+ N: H2O              0.128250  -0.260880E+05   973.59  0.0000
+          H  2.00000  O  1.00000
+
+  SPECIES BEING CONSIDERED IN THIS SYSTEM
+ (CONDENSED PHASE MAY HAVE NAME LISTED SEVERAL TIMES)
+  LAST thermo.inp UPDATE:    9/09/04
+
+  g 6/97  *H               g 4/02  HO2              tpis78  *H2            
+  g 8/89  H2O              g 6/99  H2O2             g 5/97  *O             
+  g 4/02  *OH              tpis89  *O2              g 8/01  O3             
+  g11/99  H2O(cr)          g 8/01  H2O(L)           g 8/01  H2O(L)         
+
+ O/F =   2.017745
+
+                       EFFECTIVE FUEL     EFFECTIVE OXIDANT        MIXTURE
+ ENTHALPY                  h(2)/R              h(1)/R               h0/R
+ (KG-MOL)(K)/KG       -0.31003474E+03     -0.48783267E+02     -0.13535501E+03
+
+ KG-FORM.WT./KG             bi(2)               bi(1)               b0i
+  *H                   0.49166589E+00      0.00000000E+00      0.16292490E+00
+  *O                   0.31528075E-01      0.62502344E-01      0.52238301E-01
+
+ POINT ITN      T            H           O 
+   1    9    3313.032      -8.911     -16.942
+ Pinf/Pt = 1.745745
+   2    4    3090.894      -9.062     -17.446
+ Pinf/Pt = 1.749318
+   2    2    3090.085      -9.062     -17.448
+
+
+
+
+
+           THEORETICAL ROCKET PERFORMANCE ASSUMING FROZEN COMPOSITION
+                                 AFTER POINT 2
+
+ Pin =  1218.3 PSIA
+ CASE =                
+
+             REACTANT                       MOLES         ENERGY      TEMP
+                                                         KJ/KG-MOL      K
+ FUEL        H2                           0.8717500     19882.551    973.588
+ OXIDANT     O2(L)                        1.0000000    -12979.000     90.170
+ NAME        H2O                          0.1282500   -216908.717    973.588
+
+ O/F=    2.01775  %FUEL= 33.137321  R,EQ.RATIO= 1.559439  PHI,EQ.RATIO= 1.699297
+
+                 CHAMBER   THROAT     EXIT
+ Pinf/P            1.0000   1.7493  1587.54
+ P, BAR            83.997   48.017  0.05291
+ T, K             3313.03  3090.08   803.56
+ RHO, KG/CU M    3.6579 0 2.2589 0 9.5716-3
+ H, KJ/KG        -1125.41 -2361.47 -10624.5
+ U, KJ/KG        -3421.71 -4487.19 -11177.3
+ G, KJ/KG        -64372.2 -61352.1 -25964.7
+ S, KJ/(KG)(K)    19.0903  19.0903  19.0903
+
+ M, (1/n)          11.996   12.087   12.087
+ Cp, KJ/(KG)(K)    6.9607   6.2128   2.9068
+ GAMMAs            1.1578   1.1630   1.3100
+ SON VEL,M/SEC     1630.5   1572.3    851.0
+ MACH NUMBER        0.000    1.000    5.122
+
+ PERFORMANCE PARAMETERS
+
+ Ae/At                      1.0000   85.130
+ CSTAR, M/SEC               2365.0   2365.0
+ CF                         0.6648   1.8430
+ Ivac, M/SEC                2924.3   4485.5
+ Isp, M/SEC                 1572.3   4358.7
+
+ MOLE FRACTIONS
+
+ *H              0.01769   *H2             0.35116   H2O             0.61860
+ *O              0.00034   *OH             0.01197   *O2             0.00023
+
+  * THERMODYNAMIC PROPERTIES FITTED TO 20000.K
+
+    PRODUCTS WHICH WERE CONSIDERED BUT WHOSE MOLE FRACTIONS
+    WERE LESS THAN 5.000000E-06 FOR ALL ASSIGNED CONDITIONS
+
+
+
+
+

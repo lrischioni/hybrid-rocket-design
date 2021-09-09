@@ -1,0 +1,9 @@
+problem   
+    det   t,k=300,  p,bar=1,
+react  
+  oxid=KNO3(a) wt=100  t,k=298.15  
+  fuel=SACAROSE  wt=100  t,k=298.15  
+    h,kj/mol=-2221.2  C 12 H 22 O 11 
+output  
+    plot t 
+end

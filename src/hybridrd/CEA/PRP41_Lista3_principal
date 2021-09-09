@@ -1,0 +1,9 @@
+problem    o/f=2.314591861,
+      rocket  frozen  nfz=2 
+  p,bar=83.99681517,
+  pi/p=1587.541394,
+react  
+  fuel=H2 moles=0.8  t,k=973.5879208  
+  oxid=O2 moles=1.  t,k=90.17  
+  fuel=H2O moles=0.12825  t,k=973.5879208  
+end

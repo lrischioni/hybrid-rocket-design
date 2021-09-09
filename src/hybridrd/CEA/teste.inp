@@ -1,0 +1,12 @@
+problem   case=MMA of=7.5,8,8.5,9,
+      rocket  frozen  nfz=2  tcest,k=3800
+  p,bar=5,
+  pip=5.2083,
+react  
+  oxid=O2 t,k=298.15  
+  fuel=C5O2H8  
+    h,kjmol=-184.5  
+output  
+     siunits massf
+    plot %f of phi,eq.ratio r,eq.ratio isp cf 
+end
