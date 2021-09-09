@@ -6,7 +6,7 @@ from hybridrd.analysis import CEAResults
 class CEAResultsTestCase(unittest.TestCase):
     def setUp(self):
         folderpath = os.path.dirname(os.path.abspath(__file__))
-        output_file_path = os.path.join(folderpath, 'aux', 'output_test.out')
+        output_file_path = os.path.join(folderpath, 'auxiliar', 'output_test.out')
         self.results = CEAResults(output_file_path)
 
     def test_gamma_value(self):

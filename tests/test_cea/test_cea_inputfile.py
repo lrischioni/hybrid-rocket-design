@@ -51,7 +51,7 @@ class CEAInputFileTestCase(unittest.TestCase):
 class LoadCEAInputFileTestCase(unittest.TestCase):
     def setUp(self):
         folderpath = os.path.dirname(os.path.abspath(__file__))
-        filepath = os.path.join(folderpath, 'aux', 'test.inp')
+        filepath = os.path.join(folderpath, 'auxiliar', 'test.inp')
         self.inputfile = CEAInputFile(filepath)
 
     def test_set_fuel_name_from_file(self):
@@ -79,9 +79,9 @@ class LoadCEAInputFileTestCase(unittest.TestCase):
 class SaveCEAInputFileFromPreviousFileTestCase(unittest.TestCase):
     def setUp(self):
         folderpath = os.path.dirname(os.path.abspath(__file__))
-        filepath = os.path.join(folderpath, 'aux', 'test.inp')
+        filepath = os.path.join(folderpath, 'auxiliar', 'test.inp')
         self.inputfile = CEAInputFile(filepath)
-        self.savepath = os.path.join(folderpath, 'aux', 'save_test.inp')
+        self.savepath = os.path.join(folderpath, 'auxiliar', 'save_test.inp')
 
     def test_save_file(self):
         self.inputfile.save(self.savepath)
@@ -143,7 +143,7 @@ class SaveCEAInputFileFromTemplateTestCase(unittest.TestCase):
         self.inputfile.set_pressure_ratio(8)
         self.inputfile.set_oxid_fuel_ratio(1.47)
         folderpath = os.path.dirname(os.path.abspath(__file__))
-        self.savepath = os.path.join(folderpath, 'aux', 'save_test_template.inp')
+        self.savepath = os.path.join(folderpath, 'auxiliar', 'save_test_template.inp')
         self.inputfile.save(self.savepath)
 
     def test_save_file(self):

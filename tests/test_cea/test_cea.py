@@ -7,7 +7,7 @@ class CEATestCase(unittest.TestCase):
     def setUp(self):
         self.cea = CEA()
         folderpath = os.path.dirname(os.path.abspath(__file__))
-        inputfile_path = os.path.join(folderpath, 'aux', 'test.inp')
+        inputfile_path = os.path.join(folderpath, 'auxiliar', 'test.inp')
         self.cea.import_cea_inputfile(inputfile_path)
         self.cea.run_cea()
 
