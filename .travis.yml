@@ -13,6 +13,6 @@ script: tox
 notifications:
   email:
     recipients:
-      - lucasgrischioni@gmail.com
+      - lucasgrishioni@gmail.com
     on_sucess: always
     on_failure: always
