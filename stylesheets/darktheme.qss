@@ -81,7 +81,7 @@ QTabWidget#SimulationResults > QTabBar::tab:!selected
 
 QAbstractScrollArea
 {
-    background-color: #546E7A;
+    background-color: #263238;
     selection-background-color: rgba(55, 71, 79, 0.4);
 }
 
