@@ -1,1 +1,1 @@
-*.fortran linguist-detectable=false
+src/hybridrd/CEA/* linguist-vendored
