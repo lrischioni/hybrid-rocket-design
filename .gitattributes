@@ -1,1 +1,1 @@
-src/hybridrd/CEA/* linguist-vendored
+*.f linguist-detectable=false
