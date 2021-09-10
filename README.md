@@ -22,7 +22,7 @@ Tool to assist in hybrid rocket motor design.
 4. [Usage](#usage)
 5. [License](#license)
 
-# 🚀 About the project
+# About the project
 
 This project consists of a tool developed to assist researchers and students during the design of hybrid rocket engines.
 This tool can solve the rocket problem using the [CEA NASA](https://www1.grc.nasa.gov/research-and-engineering/ceaweb/) (McBride) program,
@@ -30,7 +30,7 @@ perform a propellant analysis by varying the misture ratio value, as well as car
 
 This software can be used during early development to validate the propellant viability, as well as the motor geometry. See [Usage](#usage) for more information about everything this tool can do. 
 
-# 💻 Prerequisites
+# Prerequisites
 
 ## Linux
 
@@ -54,7 +54,7 @@ $ sudo apt-get install --install-recommends winehq-stable
 * Python 3.3+
 * pip
 
-# 📦 Installation
+# Installation
 
 ## Linux
 
@@ -98,7 +98,7 @@ python3 -m venv myenv
 pip install .
 ```
 
-# 🔨 Usage
+# Usage
 
 Just type `hybridrd` on the terminal to launch the GUI after installing.
 
@@ -130,6 +130,6 @@ After providing the required information on the 'Burn Simulation' tab, you can p
     <img width = "800" src="../assets/images/app_usage6.png?raw=true">
 </p>
 
-# 📝 License
+# License
 
 This project is licensed under the terms of the [GNU GPLv3 license](../master/LICENSE.txt).
