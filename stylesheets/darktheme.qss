@@ -57,7 +57,7 @@ QTabWidget#SimulationResults > QTabBar::tab
                         stop:1 #102027);
     border: 1px solid #102027;
     min-width: 17px;
-    min-height: 8ex;
+    min-height: 10ex;
     padding: 2px;
 }
 
