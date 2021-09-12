@@ -4,8 +4,13 @@ import pyqtgraph as pg
 
 class PropellantAnalysisTab(QtWidgets.QWidget):
     """
+    This class represents the 'Propellant Analysis' tab from the GUI.
     """
     def __init__(self, *args, **kwargs):
+        """
+        Constructor method. All arguments accepted by the
+        :class: `QtWidgets.QWidget` can be passed.
+        """
         super().__init__(*args, **kwargs)
         self._setupUi()
 

@@ -4,8 +4,13 @@ import pyqtgraph as pg
 
 class BurnSimulationResultsTab(QtWidgets.QTabWidget):
     """
+    This class represents the 'Burn Simulation Results' tab from the GUI.
     """
     def __init__(self, *args, **kwargs):
+        """
+        Constructor method. All arguments accepted by the
+        :class: `QtWidgets.QWidget` can be passed.
+        """
         super().__init__(*args, **kwargs)
         self.setObjectName('SimulationResults')
         self.setTabPosition(QtWidgets.QTabWidget.West)
@@ -16,8 +21,6 @@ class BurnSimulationResultsTab(QtWidgets.QTabWidget):
 
 
 class _ResultsTab(QtWidgets.QWidget):
-    """
-    """
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._setupUi()

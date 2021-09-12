@@ -3,8 +3,13 @@ from PyQt5 import QtWidgets
 
 class SettingsMenu(QtWidgets.QMenu):
     """
+    This class represents the settings menu from the menu bar.
     """
     def __init__(self, *args, **kwargs):
+        """
+        Constructor method. All arguments accepted by the :class: `QtWidgets.QMenu` can
+        be passed.
+        """
         super().__init__(*args, **kwargs)
         self.setTitle('Settings')
         self._setupSubMenus()

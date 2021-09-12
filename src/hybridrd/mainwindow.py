@@ -13,7 +13,14 @@ WORK_DIR = os.getcwd()
 
 
 class MainWindow(QtWidgets.QMainWindow):
+    """
+    This class represents the GUI main window, responsible for all the
+    interface operation.
+    """
     def __init__(self):
+        """
+        Constructor method.
+        """
         super().__init__()
         self.theme = 'dark theme'
         self.theme = 'light theme'

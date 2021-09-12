@@ -5,8 +5,17 @@ import numpy as np
 
 class DisplayOutputFileWindow(QtWidgets.QWidget):
     """
+    This class represents the window that displays
+    the CEA output file.
     """
     def __init__(self, filepath, *args, **kwargs):
+        """
+        Constructor method. All arguments accepted by
+        the :class: `QtWidgets.QWidget` can be passed.
+
+        Args:
+            filepath (str): Path to the CEA output file
+        """
         super().__init__(*args, **kwargs)
         self._setupUi(filepath)
 
@@ -28,9 +37,20 @@ class DisplayOutputFileWindow(QtWidgets.QWidget):
 
 class SelectStartingPoint(QtWidgets.QDialog):
     """
+    This class represents the window that displays the plot of
+    Isp vs misture ratio, and asks the user to select the starting
+    point of the burn simulation.
     """
-    def __init__(self, mainWindow):
-        super().__init__(mainWindow)
+    def __init__(self, mainWindow, *args, **kwargs):
+        """
+        Constructor method. All arguments accepted by the
+        :class: `QtWidgets.QDialog` can be passed.
+
+        Args:
+            mainWindow (QtWidgets.QMainWindow): Reference to Main Window from the GUI. It is passed
+            as parent to the :class: `QtWidgets.QDialog`
+        """
+        super().__init__(mainWindow, *args, **kwargs)
         self._ceaResults = mainWindow.cea.propellant_analysis_results
         self._mainWindow = mainWindow
         self._setupUi()
@@ -130,8 +150,18 @@ class SelectStartingPoint(QtWidgets.QDialog):
 
 class InsertRegressionParameters(QtWidgets.QDialog):
     """
+    This class represents the window that asks the user to enter
+    the regression rate equaiton parameters.
     """
     def __init__(self, mainWindow, *args, **kwargs):
+        """
+        Constructor method. All arguments accepted by the
+        :class: `QtWidgets.QDialog` can be passed.
+
+        Args:
+            mainWindow (QtWidgets.QMainWindow): Reference to Main Window from the GUI. It is passed
+            as parent to the :class: `QtWidgets.QDialog`
+        """
         super().__init__(mainWindow, *args, **kwargs)
         self._mainWindow = mainWindow
         self._setupUi()

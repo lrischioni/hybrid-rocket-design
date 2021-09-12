@@ -4,8 +4,13 @@ from PyQt5 import QtCore, QtWidgets
 
 class BurnSimulationTab(QtWidgets.QWidget):
     """
+    This class represents the 'Burn Simulation' tab from the GUI.
     """
     def __init__(self, *args, **kwargs):
+        """
+        Constructor method. All arguments accepted by the
+        :class: `QtWidgets.QWidget` can be passed.
+        """
         super().__init__(*args, **kwargs)
         self._setupUi()
 

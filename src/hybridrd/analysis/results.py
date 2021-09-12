@@ -10,8 +10,15 @@ from hybridrd.propellant import RegressionRateEquationParameters
 
 class CEAResults(object):
     """
+    This class contains the results from the CEA output.
     """
     def __init__(self, output_file_path):
+        """
+        Constructor method.
+
+        Args:
+            output_file_path (str): Path to the output file
+        """
         self._read_output_file(output_file_path)
 
     def _read_output_file(self, output_file_path):
@@ -47,8 +54,16 @@ class CEAResults(object):
 
 class CEAPropellantAnalysis(object):
     """
+    This class is responsible for running the CEA application for a variety
+    of misture ratio values.
     """
     def __init__(self, cea_input_file):
+        """
+        Constructor method.
+
+        Args:
+            cea_input_file (:class: `CEAInputFile`): Reference to the :class: `CEAInputFile`.
+        """
         self._input_file = cea_input_file
         self._oxid_fuel_ratio = list()
         self._gamma = list()
@@ -61,6 +76,15 @@ class CEAPropellantAnalysis(object):
         self.LINSPACE_SIZE = 100
 
     def perform_propellant_analysis(self, oxid_fuel_ratio_start, oxid_fuel_ratio_end, cf_nozzle_correction, progress_bar):
+        """
+        Runs the CEA application varying the misture ratio value.
+
+        Args:
+            oxid_fuel_ratio_start (float): Initial misture ratio
+            oxid_fuel_ratio_end (float): Final misture ratio
+            cf_nozzle_correction (float): Nozzle correction value for the Cf parameter
+            progress_bar (QtWidgets.QProgressBar): Reference to the :class: `QtWidgets.QProgressBar`
+        """
         self._cf_correction = cf_nozzle_correction
         for idx, of_ratio in enumerate(np.linspace(oxid_fuel_ratio_start, oxid_fuel_ratio_end, self.LINSPACE_SIZE)):
             self._input_file.set_oxid_fuel_ratio(of_ratio)
@@ -103,6 +127,12 @@ class CEAPropellantAnalysis(object):
         return CEAResults(self._output_path)
 
     def generate_results(self):
+        """
+        Return the propellant analysis results.
+
+        Returns:
+            pd.DataFrame: A dataframe containing the propellant analysis results
+        """
         results = {
             'o/f': self._oxid_fuel_ratio,
             'Gamma': self._gamma,
@@ -116,8 +146,17 @@ class CEAPropellantAnalysis(object):
 
 class CEABurnSimulation(object):
     """
+    This class is responsible for performing an iterative process to simulate the burn.
     """
     def __init__(self, cea_input_file, method):
+        """
+        Constructor method.
+
+        Args:
+            cea_input_file (:class: `CEAInputFile`): Reference to the :class: `CEAInputFile`
+            method (str): Simulation method ('Inner diameter known, 'Outer diameter known',
+                'Length known)
+        """
         self._input_file = cea_input_file
         self._method = method
         self.LINSPACE_SIZE = 100
@@ -134,33 +173,96 @@ class CEABurnSimulation(object):
         self.gox_over_time = list()
 
     def set_initial_thrust(self, initial_thrust):
+        """
+        Set the initial thrust at the starting point on the burn simulation.
+
+        Args:
+            initial_thrust (float): Initial thrust
+        """
         self._initial_thrust = initial_thrust
 
     def set_chamber_pressure(self, chamber_pressure):
+        """
+        Set the chamber pressure in Pascal.
+
+        Args:
+            chamber_pressure (float): Chamber pressure in bar
+        """
         self._chamber_pressure = chamber_pressure * (10**5)  # bar to Pa
 
     def set_regression_rate_parameters(self, a, n):
+        """
+        Set the parameters of the regression rate equation on the
+        :class: `RegressionRateEquationParameters`.
+
+        Args:
+            a (float): Regression rate coefficient
+            n (float): Flux exponent
+        """
         self._regression_rate_parameters = RegressionRateEquationParameters(a, n)
 
     def set_grain_density(self, rho):
+        """
+        Set the grain density in g/cm³.
+
+        Args:
+            rho (float): Grain density
+        """
         self._rho = rho
 
     def set_cf_nozzle_correction(self, cf_correction):
+        """
+        Set the nozzle correction for the Cf parameter.
+
+        Args:
+            cf_correction (float): Correction value
+        """
         self._cf_correction = cf_correction
 
     def set_burn_time(self, burn_time):
+        """
+        Set the burn duration time in seconds.
+
+        Args:
+            burn_time (float): Burn duration time
+        """
         self._burn_time = burn_time
 
     def set_grain_inner_diameter(self, inner_diameter):
+        """
+        Set the initial grain inner diameter in mm.
+
+        Args:
+            inner_diameter (float): Grain inner diameter
+        """
         self._grain_inner_diameter = inner_diameter
 
     def set_grain_outer_diameter(self, outer_diameter):
+        """
+        Set the grain outer diameter in mm.
+
+        Args:
+            outer_diameter (float): Grain outer diameter
+        """
         self._grain_outer_diameter = outer_diameter
 
     def set_grain_length(self, grain_length):
+        """
+        Set the grain length in cm.
+
+        Args:
+            grain_length (float): Grain length
+        """
         self._grain_length = grain_length
 
     def set_initial_parameters(self, starting_of):
+        """
+        Based on the starting misture ratio value, runs CEA and store the
+        initial parameters obtained from the output.
+
+        Args:
+            starting_of (float): Starting misture ratio
+        """
         self._input_file.set_oxid_fuel_ratio(starting_of)
         self._run_cea()
         cea_initial_results = self._get_cea_results()
@@ -202,6 +304,17 @@ class CEABurnSimulation(object):
         return CEAResults(self._output_path)
 
     def compute_values_over_time(self, progress_bar):
+        """
+        Performs the iterative process, storing the results and updating the
+        progress bar.
+
+        :param progress_bar: Reference to the QtWidgets.QProgressBar
+        :type progress_bar: QtWidgets.QProgressBar
+
+        Args:
+            progress_bar (QtWidgets.QProgressBar): Reference to the
+                :class: `QtWidgets.QProgressBar`
+        """
         self.time = np.linspace(0, self._burn_time, self.LINSPACE_SIZE)
         for idx, _ in enumerate(self.time):
             if self.time[idx] == 0:
@@ -371,6 +484,12 @@ class CEABurnSimulation(object):
         return np.array(self.cf_over_time) * self._at * self._chamber_pressure * (10**(-6))
 
     def generate_results(self):
+        """
+        Returns the burn simulation results.
+
+        Returns:
+            pd.Dataframe: A dataframe containing the burn simulation results
+        """
         results = {
             'Time': self.time,
             'Grain_Inner_Diameter': self.grain_inner_diameter_over_time,
@@ -387,5 +506,11 @@ class CEABurnSimulation(object):
         return pd.DataFrame(results)
 
     def is_ac_at_ratio_valid(self):
+        """
+        Checks if the Ac/At ratio is valid.
+
+        Returns:
+            bool: If the ratio Ac/At is valid
+        """
         self._compute_initial_values()
         return self._grain_inner_diameter >= math.sqrt(6) * self._nozzle_throat_diameter

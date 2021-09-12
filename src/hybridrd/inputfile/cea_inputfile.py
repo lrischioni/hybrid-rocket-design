@@ -6,8 +6,17 @@ from hybridrd.propellant import Propellant
 
 class CEAInputFile(object):
     """
+    This is a class that represents the input file .inp from CEA.
+    It contains all the information necessary to run the application
+    and obtain the results provided by CEA.
     """
     def __init__(self, filepath=''):
+        """
+        Constructor method.
+
+        Args:
+            filepath (str, optional): Path to the input file. Defaults to ''.
+        """
         if self._file_exists(filepath):
             self.filepath = filepath
             self._load_input_file_information(filepath)
@@ -100,29 +109,94 @@ class CEAInputFile(object):
         self.set_method(method, freezing_point)
 
     def set_fuel(self, fuel_name, fuel_amount, fuel_temperature, energy_h=None, formula=None):
+        """
+        Set the fuel information on the input file, using the :class: `Propellant`.
+
+        Args:
+            name (str): Name of the propellant
+            amount (float): Amount that this propellant represents overall considering
+                all fuels or all oxidants
+            temperature (float): Temperature of the propellant in Kelvin
+            energy_h (float, optional): Enthalpy energy of the propellant. This must
+                be provided only if the propellant is not on the CEA database. Defaults to None.
+            formula (str, optional): Chemical formula of the propellant. This must be provided
+                only if the propellant is not on the CEA database. Defaults to None.
+        """
         self.fuel = Propellant(fuel_name, fuel_amount, fuel_temperature, energy_h, formula)
 
     def set_oxidant(self, oxidant_name, oxidant_amount, oxidant_temperature, energy_h=None, formula=None):
+        """
+        Set the oxidant information on the input file, using the :class: `Propellant`.
+
+        Args:
+            name (str): Name of the propellant
+            amount (float): Amount that this propellant represents overall considering
+                all fuels or all oxidants
+            temperature (float): Temperature of the propellant in Kelvin
+            energy_h (float, optional): Enthalpy energy of the propellant. This must
+                be provided only if the propellant is not on the CEA database. Defaults to None.
+            formula (str, optional): Chemical formula of the propellant. This must be provided
+                only if the propellant is not on the CEA database. Defaults to None.
+        """
         self.oxidant = Propellant(oxidant_name, oxidant_amount, oxidant_temperature, energy_h, formula)
 
     def set_chamber_pressure(self, chamber_pressure):
+        """
+        Set the chamber pressure information on the input file.
+
+        Args:
+            chamber_pressure (float): Chamber pressure in bar
+        """
         self.chamber_pressure = chamber_pressure
 
     def set_pressure_ratio(self, chamber_atmospheric_pressure_ratio):
+        """
+        Set on the input file the pressure ratio between the chamber and the atmosphere.
+
+        Args:
+            chamber_atmospheric_pressure_ratio (float): Pressure ratio
+        """
         self.chamber_atmospheric_pressure_ratio = chamber_atmospheric_pressure_ratio
 
     def set_oxid_fuel_ratio(self, oxid_fuel_ratio):
+        """
+        Set on the input file the misture ratio between oxidant and fuel.
+
+        Args:
+            oxid_fuel_ratio (float): Misture ratio
+        """
         self.oxid_fuel_ratio = oxid_fuel_ratio
 
     def set_method(self, method, freezing_point=None):
+        """
+        Set on the input file the chosen method between Equilibrium or Frozen.
+
+        Args:
+            method ([str]): Chosen method between Equilibrium or Frozen
+            freezing_point (str, optional): Flux freezing point (Combustor, Throat or
+                Exit1). Defaults to None.
+        """
         self.method = method
         if freezing_point:
             self.freezing_point = freezing_point
 
     def set_filepath(self, new_filepath):
+        """
+        Set a new filepath to the input file.
+
+        Args:
+            new_filepath (str): New filepath
+        """
         self.filepath = new_filepath
 
     def save(self, savepath=None):
+        """
+        Save the information on this class to the input file.
+
+        Args:
+            savepath ([str], optional): Path where the input file will be saved. If none,
+            the input file is saved on the path set on the ``filepath`` attribute. Defaults to None.
+        """
         if savepath is None:
             savepath = self._get_tmp_savepath_from_filepath()
         if hasattr(self, 'filepath'):

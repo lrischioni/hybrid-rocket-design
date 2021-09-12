@@ -4,8 +4,17 @@ from PyQt5 import QtCore, QtWidgets
 
 class MenuBar(QtWidgets.QMenuBar):
     """
+    This class represents the menu bar from the GUI.
     """
     def __init__(self, MainWindow, *args, **kwargs):
+        """
+        Constructor method. All arguments accepted by the
+        :class: `QtWidgets.QMenuBar` can be passed.
+
+        Args:
+            MainWindow (QtWidgets.QMainWindow): Reference to Main Window from the GUI. It is passed
+            as parent to the :class: `QtWidgets.QMenuBar`
+        """
         super().__init__(MainWindow, *args, **kwargs)
         self.setEnabled(True)
         self.setGeometry(QtCore.QRect(0, 0, 800, 20))

@@ -4,8 +4,13 @@ from hybridrd.gui.tabs import InputFileTab, PropellantAnalysisTab, BurnSimulatio
 
 class AppTabWidget(QtWidgets.QTabWidget):
     """
+    This class represents the TabWidget from the GUI application.
     """
     def __init__(self, *args, **kwargs):
+        """
+        Constructor method. All arguments accepted by the
+        :class: `QtWidgets.QTabWidget` can be passed.
+        """
         super().__init__(*args, **kwargs)
         QtCore.QLocale.setDefault(QtCore.QLocale(QtCore.QLocale.English, QtCore.QLocale.UnitedStates))
         self.input_file_tab = InputFileTab(self)
