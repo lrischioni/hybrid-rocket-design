@@ -26,7 +26,7 @@ Tool to assist in hybrid rocket motor design.
 
 This project consists of a tool developed to assist researchers and students during the design of hybrid rocket engines.
 This tool can solve the rocket problem using the [CEA NASA](https://www1.grc.nasa.gov/research-and-engineering/ceaweb/) (McBride) program,
-perform a propellant analysis by varying the misture ratio value, as well as carry out a simulation of the burning for a single perforation tubular grain, providing as output the motor dimensions.
+perform a propellant analysis by varying the mixing ratio value, as well as carry out a simulation of the burning for a single perforation tubular grain, providing as output the motor dimensions.
 
 This software can be used during early development to validate the propellant viability, as well as the motor geometry. See [Usage](#usage) for more information about everything this tool can do. 
 
