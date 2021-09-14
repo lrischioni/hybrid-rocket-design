@@ -19,7 +19,7 @@ setup(
     license='GNU General Public License v3.0',
     platforms=['Linux', 'Windows'],
     packages=find_packages('src'),
-    packages_dir={'', 'src'},
+    package_dir={'': 'src'},
     include_package_data=True,
     zip_safe=False,
     classifiers=[
